@@ -24,9 +24,9 @@ function updateWeaponCamoProgress(weapon, completedKills) {
     militaryCamoRequirements.forEach(camo => {
         const progressElement = document.getElementById(camo.id);
         if (completedKills >= camo.requiredKills) {
-            progressElement.textContent = `- Progress: Completed`;
+            progressElement.textContent = ` - Progress: Completed`;
         } else {
-            progressElement.textContent = `- Progress: ${completedKills} / ${camo.requiredKills}`;
+            progressElement.textContent = ` - Progress: ${completedKills} / ${camo.requiredKills}`;
         }
     });
 }
@@ -41,7 +41,7 @@ const specialCamoRequirements = {
         { id: 'ak74Special1Progress', requiredKills: 15, specialKey: 'special1Kills' },
         { id: 'ak74Special2Progress', requiredKills: 300, specialKey: 'special2Kills' },
     ],
-};
+}
 
 
 //Function to Update Camo Progress for Specials
@@ -50,9 +50,28 @@ function updateSpecialCamoProgress(weapon, specialCamoNum, completedKills) {
     const progressElement = document.getElementById(specialCamo.id);
 
     if (completedKills >= specialCamo.requiredKills) {
-        progressElement.textContent = `- Progress: Completed`;
+        progressElement.textContent = ` - Progress: Completed`;
     } else {
-        progressElement.textContent = `- Progress: ${completedKills} / ${specialCamo.requiredKills}`;
+        progressElement.textContent = ` - Progress: ${completedKills} / ${specialCamo.requiredKills}`;
+    }
+}
+
+// Function to Update Camo Progress for Mastery Camos
+function updateMasteryCamoProgress(weapon, camoNum, completedKills) {
+    const masteryCamoRequirements = [
+        { id: `${weapon}Mastery1Progress`, requiredKills: 15},
+        { id: `${weapon}Mastery2Progress`, requiredKills: 30},
+        { id: `${weapon}Mastery3Progress`, requiredKills: 10},
+        { id: `${weapon}Mastery4Progress`, requiredKills: 10},
+    ];
+
+    // Update Mastery Camo Progress
+    const camo = masteryCamoRequirements[camoNum - 1];
+    const progressElement = document.getElementById(camo.id);
+    if (completedKills >= camo.requiredKills) {
+        progressElement.textContent = ` - Progress: Completed (${completedKills} / ${camo.requiredKills})`;
+    } else {
+        progressElement.textContent = ` - Progress: ${completedKills} / ${camo.requiredKills}`;
     }
 }
 
@@ -77,6 +96,17 @@ function saveSpecialCamoProgress(weapon, specialCamoNum) {
     }
 }
 
+// Function to Save Progress for Mastery
+function saveMasteryCamoProgress(weapon, camoNum) {
+    const completedKillsInput = document.getElementById(`${weapon}Mastery${camoNum}Kills`);
+    const completedKills = completedKillsInput.value;
+    if (completedKills && completedKills >= 0) {
+        const key = `${weapon}Mastery${camoNum}Kills`;
+        localStorage.setItem(key, completedKills);
+        updateMasteryCamoProgress(weapon, camoNum, parseInt(completedKills));
+    }
+}
+
 //Load stored progress from localStorage for Military
 function loadWeaponProgress(weapon) {
     const savedKills = localStorage.getItem(`${weapon}CompletedKills`);
@@ -98,6 +128,16 @@ function loadSpecialCamoProgress(weapon, specialCamoNum) {
     }
 }
 
+//Load Stored Progress from localStorage for Mastery
+function loadMasteryCamoProgress(weapon, camoNum) {
+    const key = `${weapon}Mastery${camoNum}Kills`;
+    const savedKills = localStorage.getItem(key);
+    if (savedKills) {
+        const completedKillsInput = document.getElementById(`${weapon}Mastery${camoNum}Kills`);
+        completedKillsInput.value = savedKills;
+        updateMasteryCamoProgress(weapon, camoNum, parseInt(savedKills));
+    }
+}
 
 //Save Progress buttons for Militaries Camos
 document.getElementById('savexm4ProgressButton').addEventListener('click', () => saveWeaponProgress('xm4'));
@@ -109,12 +149,41 @@ document.getElementById('saveak74Special1ProgressButton').addEventListener('clic
 document.getElementById('savexm4Special2ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('xm4', 2));
 document.getElementById('saveak74Special2ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('ak74', 2));
 
-//Load progress for each weapon when the page is loaded
+//Save Progress buttons for Mastery Camos
+document.getElementById('savexm4Mastery1ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('xm4', 1));
+document.getElementById('savexm4Mastery2ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('xm4', 2));
+document.getElementById('savexm4Mastery3ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('xm4', 3));
+document.getElementById('savexm4Mastery4ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('xm4', 4));
+
+document.getElementById('saveak74Mastery1ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('ak74', 1));
+document.getElementById('saveak74Mastery2ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('ak74', 2));
+document.getElementById('saveak74Mastery3ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('ak74', 3));
+document.getElementById('saveak74Mastery4ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('ak74', 4));
+
+//Load progress for Military
 window.onload = () => {
     loadWeaponProgress('xm4');
     loadWeaponProgress('ak74');
+}
+
+//Load progress for Specials
+window.onload = () => {
     loadSpecialCamoProgress('xm4', 1);
     loadSpecialCamoProgress('xm4', 2);
+    
     loadSpecialCamoProgress('ak74', 1);
     loadSpecialCamoProgress('ak74', 2);
+}
+
+//Load progress for Mastery
+window.onload = () => {
+    loadMasteryCamoProgress('xm4', 1);
+    loadMasteryCamoProgress('xm4', 2);
+    loadMasteryCamoProgress('xm4', 3);
+    loadMasteryCamoProgress('xm4', 4);
+    
+    loadMasteryCamoProgress('ak74', 1);
+    loadMasteryCamoProgress('ak74', 2);
+    loadMasteryCamoProgress('ak74', 3);
+    loadMasteryCamoProgress('ak74', 4);
 }
