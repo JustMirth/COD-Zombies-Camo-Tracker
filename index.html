@@ -568,27 +568,62 @@
             <div class="camos">
                 <h3>Military Camos:</h3>
                 <ul>
-                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
-                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
-                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
-                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
-                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
-                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
-                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
-                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
-                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills <span id="c9SlateProgress"></span></li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills <span id="c9DesertProgress"></span></li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills <span id="c9EvergreenProgress"></span></li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills <span id="c9RuggedProgress"></span></li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills <span id="c9GrimProgress"></span></li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills <span id="c9StripeProgress"></span></li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills <span id="c9OceanicProgress"></span></li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills <span id="c9WhiteoutProgress"></span></li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills <span id="c9PurpleTigerProgress"></span></li>
                 </ul>
+                <div>
+                    <label for="c9CompletedKills">Enter completed Critical Kills for C9:</label>
+                    <input type="number" id="c9CompletedKills" min="0" placeholder="Enter kills">
+                    <button id="savec9ProgressButton">Save C9 Progress</button>
+                </div>
                 <h3>Special Camos:</h3>
                 <ul>
-                    <li><strong>Infrared</strong>: 30 Parasite kills</li>
-                    <li><strong>Lynx</strong>: 300 kills while Pack-A-Punched</li>
+                    <li><strong>Infrared</strong>: 30 Parasite kills<span id="c9Special1Progress"></span></li>
+                    <div>
+                        <label for="c9Special1Kills">Enter completed kills for Special 1:</label>
+                        <input type="number" id="c9Special1Kills" min="0" placeholder="Enter kills">
+                        <button id="savec9Special1ProgressButton">Save Special 1 Progress</button>
+                    </div>
+                    <li><strong>Lynx</strong>: 300 kills while Pack-A-Punched<span id="c9Special2Progress"></span></li>
+                    <div>
+                        <label for="c9Special2Kills">Enter completed kills for Special 2:</label>
+                        <input type="number" id="c9Special2Kills" min="0" placeholder="Enter kills">
+                        <button id="savec9Special2ProgressButton">Save Special 2 Progress</button>
+                    </div>
                 </ul>
                 <h3>Mastery Camos:</h3>
                 <ul>
-                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
-                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
-                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
-                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times<span id="c9Mastery1Progress"></span></li>
+                    <div>
+                        <label for="c9Mastery1Kills">Enter completed kills for Mastery 1:</label>
+                        <input type="number" id="c9Mastery1Kills" min="0" placeholder="Enter kills">
+                        <button id="savec9Mastery1ProgressButton">Save Mastery 1 Progress</button>
+                    </div>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations<span id="c9Mastery2Progress"></span></li>
+                    <div>
+                        <label for="c9Mastery2Kills">Enter completed kills for Mastery 2:</label>
+                        <input type="number" id="c9Mastery2Kills" min="0" placeholder="Enter kills">
+                        <button id="savec9Mastery2ProgressButton">Save Mastery 2 Progress</button>
+                    </div>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times<span id="c9Mastery3Progress"></span></li>
+                    <div>
+                        <label for="c9Mastery3Kills">Enter completed kills for Mastery 3:</label>
+                        <input type="number" id="c9Mastery3Kills" min="0" placeholder="Enter kills">
+                        <button id="savec9Mastery3ProgressButton">Save Mastery 3 Progress</button>
+                    </div>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills<span id="c9Mastery4Progress"></span></li>
+                    <div>
+                        <label for="c9Mastery4Kills">Enter completed kills for Mastery 4:</label>
+                        <input type="number" id="c9Mastery4Kills" min="0" placeholder="Enter kills">
+                        <button id="savec9Mastery4ProgressButton">Save Mastery 4 Progress</button>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -599,27 +634,62 @@
             <div class="camos">
                 <h3>Military Camos:</h3>
                 <ul>
-                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
-                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
-                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
-                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
-                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
-                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
-                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
-                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
-                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills <span id="ksvSlateProgress"></span></li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills <span id="ksvDesertProgress"></span></li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills <span id="ksvEvergreenProgress"></span></li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills <span id="ksvRuggedProgress"></span></li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills <span id="ksvGrimProgress"></span></li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills <span id="ksvStripeProgress"></span></li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills <span id="ksvOceanicProgress"></span></li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills <span id="ksvWhiteoutProgress"></span></li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills <span id="ksvPurpleTigerProgress"></span></li>
                 </ul>
+                <div>
+                    <label for="ksvCompletedKills">Enter completed Critical Kills for KSV:</label>
+                    <input type="number" id="ksvCompletedKills" min="0" placeholder="Enter kills">
+                    <button id="saveksvProgressButton">Save KSV Progress</button>
+                </div>
                 <h3>Special Camos:</h3>
                 <ul>
-                    <li><strong>Phoenix</strong>: 300 kills with Dead Wire equipped</li>
-                    <li><strong>Throttle</strong>: 300 Hipfire kills</li>
+                    <li><strong>Phoenix</strong>: 300 kills with Dead Wire equipped<span id="ksvSpecial1Progress"></span></li>
+                    <div>
+                        <label for="ksvSpecial1Kills">Enter completed kills for Special 1:</label>
+                        <input type="number" id="ksvSpecial1Kills" min="0" placeholder="Enter kills">
+                        <button id="saveksvSpecial1ProgressButton">Save Special 1 Progress</button>
+                    </div>
+                    <li><strong>Throttle</strong>: 300 Hipfire kills<span id="ksvSpecial2Progress"></span></li>
+                    <div>
+                        <label for="ksvSpecial2Kills">Enter completed kills for Special 2:</label>
+                        <input type="number" id="ksvSpecial2Kills" min="0" placeholder="Enter kills">
+                        <button id="saveksvSpecial2ProgressButton">Save Special 2 Progress</button>
+                    </div>
                 </ul>
                 <h3>Mastery Camos:</h3>
                 <ul>
-                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
-                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
-                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
-                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times<span id="ksvMastery1Progress"></span></li>
+                    <div>
+                        <label for="ksvMastery1Kills">Enter completed kills for Mastery 1:</label>
+                        <input type="number" id="ksvMastery1Kills" min="0" placeholder="Enter kills">
+                        <button id="saveksvMastery1ProgressButton">Save Mastery 1 Progress</button>
+                    </div>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations<span id="ksvMastery2Progress"></span></li>
+                    <div>
+                        <label for="ksvMastery2Kills">Enter completed kills for Mastery 2:</label>
+                        <input type="number" id="ksvMastery2Kills" min="0" placeholder="Enter kills">
+                        <button id="saveksvMastery2ProgressButton">Save Mastery 2 Progress</button>
+                    </div>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times<span id="ksvMastery3Progress"></span></li>
+                    <div>
+                        <label for="ksvMastery3Kills">Enter completed kills for Mastery 3:</label>
+                        <input type="number" id="ksvMastery3Kills" min="0" placeholder="Enter kills">
+                        <button id="saveksvMastery3ProgressButton">Save Mastery 3 Progress</button>
+                    </div>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills<span id="ksvMastery4Progress"></span></li>
+                    <div>
+                        <label for="ksvMastery4Kills">Enter completed kills for Mastery 4:</label>
+                        <input type="number" id="ksvMastery4Kills" min="0" placeholder="Enter kills">
+                        <button id="saveksvMastery4ProgressButton">Save Mastery 4 Progress</button>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -630,27 +700,62 @@
             <div class="camos">
                 <h3>Military Camos:</h3>
                 <ul>
-                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
-                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
-                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
-                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
-                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
-                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
-                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
-                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
-                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills <span id="tanto22SlateProgress"></span></li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills <span id="tanto22DesertProgress"></span></li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills <span id="tanto22EvergreenProgress"></span></li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills <span id="tanto22RuggedProgress"></span></li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills <span id="tanto22GrimProgress"></span></li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills <span id="tanto22StripeProgress"></span></li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills <span id="tanto22OceanicProgress"></span></li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills <span id="tanto22WhiteoutProgress"></span></li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills <span id="tanto22PurpleTigerProgress"></span></li>
                 </ul>
+                <div>
+                    <label for="tanto22CompletedKills">Enter completed Critical Kills for Tanto. 22:</label>
+                    <input type="number" id="tanto22CompletedKills" min="0" placeholder="Enter kills">
+                    <button id="savetanto22ProgressButton">Save Tanto. 22 Progress</button>
+                </div>
                 <h3>Special Camos:</h3>
                 <ul>
-                    <li><strong>Solemn</strong>: 5 critical kills rapidly 15 times</li>
-                    <li><strong>Aloha</strong>: 300 kills while Pack-a-Punched</li>
+                    <li><strong>Solemn</strong>: 5 critical kills rapidly 15 times<span id="tanto22Special1Progress"></span></li>
+                    <div>
+                        <label for="tanto22Special1Kills">Enter completed kills for Special 1:</label>
+                        <input type="number" id="tanto22Special1Kills" min="0" placeholder="Enter kills">
+                        <button id="savetanto22Special1ProgressButton">Save Special 1 Progress</button>
+                    </div>
+                    <li><strong>Aloha</strong>: 300 kills while Pack-a-Punched<span id="tanto22Special2Progress"></span></li>
+                    <div>
+                        <label for="tanto22Special2Kills">Enter completed kills for Special 2:</label>
+                        <input type="number" id="tanto22Special2Kills" min="0" placeholder="Enter kills">
+                        <button id="savetanto22Special2ProgressButton">Save Special 2 Progress</button>
+                    </div>
                 </ul>
                 <h3>Mastery Camos:</h3>
                 <ul>
-                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
-                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
-                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
-                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times<span id="tanto22Mastery1Progress"></span></li>
+                    <div>
+                        <label for="tanto22Mastery1Kills">Enter completed kills for Mastery 1:</label>
+                        <input type="number" id="tanto22Mastery1Kills" min="0" placeholder="Enter kills">
+                        <button id="savetanto22Mastery1ProgressButton">Save Mastery 1 Progress</button>
+                    </div>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations<span id="tanto22Mastery2Progress"></span></li>
+                    <div>
+                        <label for="tanto22Mastery2Kills">Enter completed kills for Mastery 2:</label>
+                        <input type="number" id="tanto22Mastery2Kills" min="0" placeholder="Enter kills">
+                        <button id="savetanto22Mastery2ProgressButton">Save Mastery 2 Progress</button>
+                    </div>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times<span id="tanto22Mastery3Progress"></span></li>
+                    <div>
+                        <label for="tanto22Mastery3Kills">Enter completed kills for Mastery 3:</label>
+                        <input type="number" id="tanto22Mastery3Kills" min="0" placeholder="Enter kills">
+                        <button id="savetanto22Mastery3ProgressButton">Save Mastery 3 Progress</button>
+                    </div>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills<span id="tanto22Mastery4Progress"></span></li>
+                    <div>
+                        <label for="tanto22Mastery4Kills">Enter completed kills for Mastery 4:</label>
+                        <input type="number" id="tanto22Mastery4Kills" min="0" placeholder="Enter kills">
+                        <button id="savetanto22Mastery4ProgressButton">Save Mastery 4 Progress</button>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -661,27 +766,62 @@
             <div class="camos">
                 <h3>Military Camos:</h3>
                 <ul>
-                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
-                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
-                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
-                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
-                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
-                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
-                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
-                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
-                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills <span id="pp919SlateProgress"></span></li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills <span id="pp919DesertProgress"></span></li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills <span id="pp919EvergreenProgress"></span></li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills <span id="pp919RuggedProgress"></span></li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills <span id="pp919GrimProgress"></span></li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills <span id="pp919StripeProgress"></span></li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills <span id="pp919OceanicProgress"></span></li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills <span id="pp919WhiteoutProgress"></span></li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills <span id="pp919PurpleTigerProgress"></span></li>
                 </ul>
+                <div>
+                    <label for="pp919CompletedKills">Enter completed Critical Kills for PP-919:</label>
+                    <input type="number" id="pp919CompletedKills" min="0" placeholder="Enter kills">
+                    <button id="savepp919ProgressButton">Save PP-919 Progress</button>
+                </div>
                 <h3>Special Camos:</h3>
                 <ul>
-                    <li><strong>Solvent</strong>: 300 kills with Cryo Freeze equipped</li>
-                    <li><strong>Stalking Shadow</strong>: 10 kills without reloading 15 times</li>
+                    <li><strong>Solvent</strong>: 300 kills with Cryo Freeze equipped<span id="pp919Special1Progress"></span></li>
+                    <div>
+                        <label for="pp919Special1Kills">Enter completed kills for Special 1:</label>
+                        <input type="number" id="pp919Special1Kills" min="0" placeholder="Enter kills">
+                        <button id="savepp919Special1ProgressButton">Save Special 1 Progress</button>
+                    </div>
+                    <li><strong>Stalking Shadow</strong>: 10 kills without reloading 15 times<span id="pp919Special2Progress"></span></li>
+                    <div>
+                        <label for="pp919Special2Kills">Enter completed kills for Special 2:</label>
+                        <input type="number" id="pp919Special2Kills" min="0" placeholder="Enter kills">
+                        <button id="savepp919Special2ProgressButton">Save Special 2 Progress</button>
+                    </div>
                 </ul>
                 <h3>Mastery Camos:</h3>
                 <ul>
-                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
-                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
-                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
-                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times<span id="pp919Mastery1Progress"></span></li>
+                    <div>
+                        <label for="pp919Mastery1Kills">Enter completed kills for Mastery 1:</label>
+                        <input type="number" id="pp919Mastery1Kills" min="0" placeholder="Enter kills">
+                        <button id="savepp919Mastery1ProgressButton">Save Mastery 1 Progress</button>
+                    </div>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations<span id="pp919Mastery2Progress"></span></li>
+                    <div>
+                        <label for="pp919Mastery2Kills">Enter completed kills for Mastery 2:</label>
+                        <input type="number" id="pp919Mastery2Kills" min="0" placeholder="Enter kills">
+                        <button id="savepp919Mastery2ProgressButton">Save Mastery 2 Progress</button>
+                    </div>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times<span id="pp919Mastery3Progress"></span></li>
+                    <div>
+                        <label for="pp919Mastery3Kills">Enter completed kills for Mastery 3:</label>
+                        <input type="number" id="pp919Mastery3Kills" min="0" placeholder="Enter kills">
+                        <button id="savepp919Mastery3ProgressButton">Save Mastery 3 Progress</button>
+                    </div>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills<span id="pp919Mastery4Progress"></span></li>
+                    <div>
+                        <label for="pp919Mastery4Kills">Enter completed kills for Mastery 4:</label>
+                        <input type="number" id="pp919Mastery4Kills" min="0" placeholder="Enter kills">
+                        <button id="savepp919Mastery4ProgressButton">Save Mastery 4 Progress</button>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -692,27 +832,62 @@
             <div class="camos">
                 <h3>Military Camos:</h3>
                 <ul>
-                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
-                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
-                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
-                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
-                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
-                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
-                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
-                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
-                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills <span id="jackalpdwSlateProgress"></span></li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills <span id="jackalpdwDesertProgress"></span></li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills <span id="jackalpdwEvergreenProgress"></span></li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills <span id="jackalpdwRuggedProgress"></span></li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills <span id="jackalpdwGrimProgress"></span></li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills <span id="jackalpdwStripeProgress"></span></li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills <span id="jackalpdwOceanicProgress"></span></li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills <span id="jackalpdwWhiteoutProgress"></span></li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills <span id="jackalpdwPurpleTigerProgress"></span></li>
                 </ul>
+                <div>
+                    <label for="jackalpdwCompletedKills">Enter completed Critical Kills for Jackal PDW:</label>
+                    <input type="number" id="jackalpdwCompletedKills" min="0" placeholder="Enter kills">
+                    <button id="savejackalpdwProgressButton">Save Jackal PDW Progress</button>
+                </div>
                 <h3>Special Camos:</h3>
                 <ul>
-                    <li><strong>Plunge</strong>: 300 kills with Napalm Burst equipped</li>
-                    <li><strong>Distress</strong>: 300 hipfire kills</li>
+                    <li><strong>Plunge</strong>: 300 kills with Napalm Burst equipped<span id="jackalpdwSpecial1Progress"></span></li>
+                    <div>
+                        <label for="jackalpdwSpecial1Kills">Enter completed kills for Special 1:</label>
+                        <input type="number" id="jackalpdwSpecial1Kills" min="0" placeholder="Enter kills">
+                        <button id="savejackalpdwSpecial1ProgressButton">Save Special 1 Progress</button>
+                    </div>
+                    <li><strong>Distress</strong>: 300 hipfire kills<span id="jackalpdwSpecial2Progress"></span></li>
+                    <div>
+                        <label for="jackalpdwSpecial2Kills">Enter completed kills for Special 2:</label>
+                        <input type="number" id="jackalpdwSpecial2Kills" min="0" placeholder="Enter kills">
+                        <button id="savejackalpdwSpecial2ProgressButton">Save Special 2 Progress</button>
+                    </div>
                 </ul>
                 <h3>Mastery Camos:</h3>
                 <ul>
-                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
-                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
-                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
-                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times<span id="jackalpdwMastery1Progress"></span></li>
+                    <div>
+                        <label for="jackalpdwMastery1Kills">Enter completed kills for Mastery 1:</label>
+                        <input type="number" id="jackalpdwMastery1Kills" min="0" placeholder="Enter kills">
+                        <button id="savejackalpdwMastery1ProgressButton">Save Mastery 1 Progress</button>
+                    </div>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations<span id="jackalpdwMastery2Progress"></span></li>
+                    <div>
+                        <label for="jackalpdwMastery2Kills">Enter completed kills for Mastery 2:</label>
+                        <input type="number" id="jackalpdwMastery2Kills" min="0" placeholder="Enter kills">
+                        <button id="savejackalpdwMastery2ProgressButton">Save Mastery 2 Progress</button>
+                    </div>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times<span id="jackalpdwMastery3Progress"></span></li>
+                    <div>
+                        <label for="jackalpdwMastery3Kills">Enter completed kills for Mastery 3:</label>
+                        <input type="number" id="jackalpdwMastery3Kills" min="0" placeholder="Enter kills">
+                        <button id="savejackalpdwMastery3ProgressButton">Save Mastery 3 Progress</button>
+                    </div>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills<span id="jackalpdwMastery4Progress"></span></li>
+                    <div>
+                        <label for="jackalpdwMastery4Kills">Enter completed kills for Mastery 4:</label>
+                        <input type="number" id="jackalpdwMastery4Kills" min="0" placeholder="Enter kills">
+                        <button id="savejackalpdwMastery4ProgressButton">Save Mastery 4 Progress</button>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -723,27 +898,62 @@
             <div class="camos">
                 <h3>Military Camos:</h3>
                 <ul>
-                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
-                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
-                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
-                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
-                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
-                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
-                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
-                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
-                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills <span id="kompakt92SlateProgress"></span></li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills <span id="kompakt92DesertProgress"></span></li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills <span id="kompakt92EvergreenProgress"></span></li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills <span id="kompakt92RuggedProgress"></span></li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills <span id="kompakt92GrimProgress"></span></li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills <span id="kompakt92StripeProgress"></span></li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills <span id="kompakt92OceanicProgress"></span></li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills <span id="kompakt92WhiteoutProgress"></span></li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills <span id="kompakt92PurpleTigerProgress"></span></li>
                 </ul>
+                <div>
+                    <label for="kompakt92CompletedKills">Enter completed Critical Kills for Kompakt 92:</label>
+                    <input type="number" id="kompakt92CompletedKills" min="0" placeholder="Enter kills">
+                    <button id="savekompakt92ProgressButton">Save Kompakt 92 Progress</button>
+                </div>
                 <h3>Special Camos:</h3>
                 <ul>
-                    <li><strong>Tequila Sunset</strong>: 300 kills at Rare rarity or higher</li>
-                    <li><strong>Voidthorn</strong>: 300 point blank kills</li>
+                    <li><strong>Tequila Sunset</strong>: 300 kills at Rare rarity or higher<span id="kompakt92Special1Progress"></span></li>
+                    <div>
+                        <label for="kompakt92Special1Kills">Enter completed kills for Special 1:</label>
+                        <input type="number" id="kompakt92Special1Kills" min="0" placeholder="Enter kills">
+                        <button id="savekompakt92Special1ProgressButton">Save Special 1 Progress</button>
+                    </div>
+                    <li><strong>Voidthorn</strong>: 300 point blank kills<span id="kompakt92Special2Progress"></span></li>
+                    <div>
+                        <label for="kompakt92Special2Kills">Enter completed kills for Special 2:</label>
+                        <input type="number" id="kompakt92Special2Kills" min="0" placeholder="Enter kills">
+                        <button id="savekompakt92Special2ProgressButton">Save Special 2 Progress</button>
+                    </div>
                 </ul>
                 <h3>Mastery Camos:</h3>
                 <ul>
-                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
-                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
-                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
-                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times<span id="kompakt92Mastery1Progress"></span></li>
+                    <div>
+                        <label for="kompakt92Mastery1Kills">Enter completed kills for Mastery 1:</label>
+                        <input type="number" id="kompakt92Mastery1Kills" min="0" placeholder="Enter kills">
+                        <button id="savekompakt92Mastery1ProgressButton">Save Mastery 1 Progress</button>
+                    </div>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations<span id="kompakt92Mastery2Progress"></span></li>
+                    <div>
+                        <label for="kompakt92Mastery2Kills">Enter completed kills for Mastery 2:</label>
+                        <input type="number" id="kompakt92Mastery2Kills" min="0" placeholder="Enter kills">
+                        <button id="savekompakt92Mastery2ProgressButton">Save Mastery 2 Progress</button>
+                    </div>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times<span id="kompakt92Mastery3Progress"></span></li>
+                    <div>
+                        <label for="kompakt92Mastery3Kills">Enter completed kills for Mastery 3:</label>
+                        <input type="number" id="kompakt92Mastery3Kills" min="0" placeholder="Enter kills">
+                        <button id="savekompakt92Mastery3ProgressButton">Save Mastery 3 Progress</button>
+                    </div>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills<span id="kompakt92Mastery4Progress"></span></li>
+                    <div>
+                        <label for="kompakt92Mastery4Kills">Enter completed kills for Mastery 4:</label>
+                        <input type="number" id="kompakt92Mastery4Kills" min="0" placeholder="Enter kills">
+                        <button id="savekompakt92Mastery4ProgressButton">Save Mastery 4 Progress</button>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -754,27 +964,62 @@
             <div class="camos">
                 <h3>Military Camos:</h3>
                 <ul>
-                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
-                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
-                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
-                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
-                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
-                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
-                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
-                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
-                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills <span id="saugSlateProgress"></span></li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills <span id="saugDesertProgress"></span></li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills <span id="saugEvergreenProgress"></span></li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills <span id="saugRuggedProgress"></span></li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills <span id="saugGrimProgress"></span></li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills <span id="saugStripeProgress"></span></li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills <span id="saugOceanicProgress"></span></li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills <span id="saugWhiteoutProgress"></span></li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills <span id="saugPurpleTigerProgress"></span></li>
                 </ul>
+                <div>
+                    <label for="saugCompletedKills">Enter completed Critical Kills for Saug:</label>
+                    <input type="number" id="saugCompletedKills" min="0" placeholder="Enter kills">
+                    <button id="savesaugProgressButton">Save Saug Progress</button>
+                </div>
                 <h3>Special Camos:</h3>
                 <ul>
-                    <li><strong>Whisper</strong>: 300 kills with Dead Wire equipped</li>
-                    <li><strong>Limewave</strong>: 300 Point Blank kills</li>
+                    <li><strong>Whisper</strong>: 300 kills with Dead Wire equipped<span id="saugSpecial1Progress"></span></li>
+                    <div>
+                        <label for="saugSpecial1Kills">Enter completed kills for Special 1:</label>
+                        <input type="number" id="saugSpecial1Kills" min="0" placeholder="Enter kills">
+                        <button id="savesaugSpecial1ProgressButton">Save Special 1 Progress</button>
+                    </div>
+                    <li><strong>Limewave</strong>: 300 Point Blank kills<span id="saugSpecial2Progress"></span></li>
+                    <div>
+                        <label for="saugSpecial2Kills">Enter completed kills for Special 2:</label>
+                        <input type="number" id="saugSpecial2Kills" min="0" placeholder="Enter kills">
+                        <button id="savesaugSpecial2ProgressButton">Save Special 2 Progress</button>
+                    </div>
                 </ul>
                 <h3>Mastery Camos:</h3>
                 <ul>
-                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
-                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
-                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
-                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times<span id="saugMastery1Progress"></span></li>
+                    <div>
+                        <label for="saugMastery1Kills">Enter completed kills for Mastery 1:</label>
+                        <input type="number" id="saugMastery1Kills" min="0" placeholder="Enter kills">
+                        <button id="savesaugMastery1ProgressButton">Save Mastery 1 Progress</button>
+                    </div>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations<span id="saugMastery2Progress"></span></li>
+                    <div>
+                        <label for="saugMastery2Kills">Enter completed kills for Mastery 2:</label>
+                        <input type="number" id="saugMastery2Kills" min="0" placeholder="Enter kills">
+                        <button id="savesaugMastery2ProgressButton">Save Mastery 2 Progress</button>
+                    </div>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times<span id="saugMastery3Progress"></span></li>
+                    <div>
+                        <label for="saugMastery3Kills">Enter completed kills for Mastery 3:</label>
+                        <input type="number" id="saugMastery3Kills" min="0" placeholder="Enter kills">
+                        <button id="savesaugMastery3ProgressButton">Save Mastery 3 Progress</button>
+                    </div>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills<span id="saugMastery4Progress"></span></li>
+                    <div>
+                        <label for="saugMastery4Kills">Enter completed kills for Mastery 4:</label>
+                        <input type="number" id="saugMastery4Kills" min="0" placeholder="Enter kills">
+                        <button id="savesaugMastery4ProgressButton">Save Mastery 4 Progress</button>
+                    </div>
                 </ul>
             </div>
         </div>
