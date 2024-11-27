@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BO6 Zombies Camo Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+<header>
+    <h1>Black Ops 6 Zombies Camo Tracker</h1>
+    <nav>
+        <ul>
+            <li><a href="#assault_Rifles">Assault Rifles</a></li>
+            <li><a href="#submachine_Guns">Submachine Guns</a></li>
+            <li><a href="#shotguns">Shotguns</a></li>
+            <li><a href="#light_Machine_Guns">Light Machine Guns</a></li>
+            <li><a href="#marksman_Rifles">Marksman Rifles</a></li>
+            <li><a href="#sniper_Rifles">Sniper Rifles</a></li>
+            <li><a href="#pistols">Pistols</a></li>
+            <li><a href="#launchers">Launchers</a></li>
+            <li><a href="#specials">Specials</a></li>
+            <li><a href="#melee_weapons">Melee Weapons</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="assault_Rifles">
+    <h2>Assault Rifles</h2>
+    <div class="weapon_Archetype" id="ARs">
+        <div>
+            <p>XM4</p>
+            <img src="/Weapon_Photos/XM4.webp" alt="XM4">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills <span id="xm4SlateProgress"></span></li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills <span id="xm4DesertProgress"></span></li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills <span id="xm4EvergreenProgress"></span></li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills <span id="xm4RuggedProgress"></span></li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills <span id="xm4GrimProgress"></span></li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills <span id="xm4StripeProgress"></span></li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills <span id="xm4OceanicProgress"></span></li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills <span id="xm4WhiteoutProgress"></span></li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills <span id="xm4PurpleTigerProgress"></span></li>
+                </ul>
+                <div>
+                    <label for="xm4CompletedKills">Enter completed Critical Kills for XM4:</label>
+                    <input type="number" id="xm4CompletedKills" min="0" placeholder="Enter kills">
+                    <button id="savexm4ProgressButton">Save XM4 Progress</button>
+                </div>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Liquify</strong>: 300 kills with Napalm Burst Equipped <span id="xm4Special1Progress"></span></li>
+                    <div>
+                        <label for="xm4Special1Kills">Enter completed kills for Special 1:</label>
+                        <input type="number" id="xm4Special1Kills" min="0" placeholder="Enter kills">
+                        <button id="savexm4Special1ProgressButton">Save Special 1 Progress</button>
+                    </div>
+                    <li><strong>Mainframe</strong>: 30 Vermin kills <span id="xm4Special2Progress"></span></li>
+                    <div>
+                        <label for="xm4Special2Kills">Enter completed kills for Special 2:</label>
+                        <input type="number" id="xm4Special2Kills" min="0" placeholder="Enter kills">
+                        <button id="savexm4Special2ProgressButton">Save Special 2 Progress</button>
+                    </div>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>AK-74</p>
+            <img src="/Weapon_Photos/AK74.webp" alt="AK-74">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills <span id="ak74SlateProgress"></span></li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills <span id="ak74DesertProgress"></span></li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills <span id="ak74EvergreenProgress"></span></li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills <span id="ak74RuggedProgress"></span></li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills <span id="ak74GrimProgress"></span></li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills <span id="ak74StripeProgress"></span></li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills <span id="ak74OceanicProgress"></span></li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills <span id="ak74WhiteoutProgress"></span></li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills <span id="ak74PurpleTigerProgress"></span></li>
+                </ul>
+                <div>
+                    <label for="ak74CompletedKills">Enter completed Critical Kills for AK-74:</label>
+                    <input type="number" id="ak74CompletedKills" min="0" placeholder="Enter kills">
+                    <button id="saveak74ProgressButton">Save AK-74 Progress</button>
+                </div>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Chlorine</strong>: 5 critical kills rapidly 15 times <span id="ak74Special1Progress"></span></li>
+                    <label for="ak74Special1Kills">Enter completed kills for Special 2:</label>
+                        <input type="number" id="ak74Special1Kills" min="0" placeholder="Enter kills">
+                        <button id="saveak74Special1ProgressButton">Save Special 2 Progress</button>
+                    <li><strong>Haunted</strong>: 300 kills while Pack-a-Punched <span id="ak74Special2Progress"></span></li>
+                    <div>
+                        <label for="ak74Special2Kills">Enter completed kills for Special 2:</label>
+                        <input type="number" id="ak74Special2Kills" min="0" placeholder="Enter kills">
+                        <button id="saveak74Special2ProgressButton">Save Special 2 Progress</button>
+                    </div>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>AMES 85</p>
+            <img src="/Weapon_Photos/AMES85.webp" alt="AMES 85">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Hyperion</strong>: 300 kills at Rare rarity or higher</li>
+                    <li><strong>Graveyard</strong>: 300 kills with Brain Rot equipped</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>GPR 91</p>
+            <img src="/Weapon_Photos/GPR91.webp" alt="GPR 91">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Night Stalker</strong>: 300 kills with Cryo Freeze equipped</li>
+                    <li><strong>Frostblossom</strong>: 100 enemies killed while affected by your Tactical Equipment</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>Model L</p>
+            <img src="/Weapon_Photos/ModelL.webp" alt="Model L">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Ghost Blossom</strong>: 75 Armored Zombie kills</li>
+                    <li><strong>Walnut</strong>: 5 critical kills rapidly 15 times</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>Goblin Mk2</p>
+            <img src="/Weapon_Photos/GoblinMk2.webp" alt="Goblin Mk2">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Astral Pride</strong>: 10 Mangler kills</li>
+                    <li><strong>Blood Scent</strong>: 5 critical kills rapidly 15 times</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>AS Val</p>
+            <img src="/Weapon_Photos/ASVAL.webp" alt="AS Val">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Malachite</strong>: 30 Parasite kills</li>
+                    <li><strong>Mountain Goat</strong>: 300 kills with Dead Wire equipped</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>Krig C</p>
+            <img src="/Weapon_Photos/KRIGC.webp" alt="Krig C">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Sunny Splash</strong>: 300 kills with Cryo Freeze equipped</li>
+                    <li><strong>Crowsbane</strong>: 100 enemies killed while affected by your Tactical Equipment</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="submachine_Guns">
+    <h2>Submachine Guns</h2>
+    <div class="weapon_Archetype" id="SMGs">
+        <div>
+            <p>C9</p>
+            <img src="/Weapon_Photos/C9.webp" alt="C9">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Infrared</strong>: 30 Parasite kills</li>
+                    <li><strong>Lynx</strong>: 300 kills while Pack-A-Punched</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>KSV</p>
+            <img src="/Weapon_Photos/KSV.webp" alt="KSV">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Phoenix</strong>: 300 kills with Dead Wire equipped</li>
+                    <li><strong>Throttle</strong>: 300 Hipfire kills</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>Tanto .22</p>
+            <img src="/Weapon_Photos/Tanto.22.webp" alt="Tanto .22">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Solemn</strong>: 5 critical kills rapidly 15 times</li>
+                    <li><strong>Aloha</strong>: 300 kills while Pack-a-Punched</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>PP-919</p>
+            <img src="/Weapon_Photos/PP-919.webp" alt="PP-919">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Solvent</strong>: 300 kills with Cryo Freeze equipped</li>
+                    <li><strong>Stalking Shadow</strong>: 10 kills without reloading 15 times</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>Jackal PDW</p>
+            <img src="/Weapon_Photos/Jackal.webp" alt="Jackal">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Plunge</strong>: 300 kills with Napalm Burst equipped</li>
+                    <li><strong>Distress</strong>: 300 hipfire kills</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>Kompakt 92</p>
+            <img src="/Weapon_Photos/Kompakt92.webp" alt="Kompakt 92">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Tequila Sunset</strong>: 300 kills at Rare rarity or higher</li>
+                    <li><strong>Voidthorn</strong>: 300 point blank kills</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>Saug</p>
+            <img src="/Weapon_Photos/Saug.webp" alt="Saug">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Whisper</strong>: 300 kills with Dead Wire equipped</li>
+                    <li><strong>Limewave</strong>: 300 Point Blank kills</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="shotguns">
+    <h2>Shotguns</h2>
+    <div class="weapon_Archetype" id="SGs">
+        <div>
+            <p>Marine SP</p>
+            <img src="/Weapon_Photos/Marine.webp" alt="Marine SP">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Strawberry Mint</strong>: 300 kills at Rare rarity or higher</li>
+                    <li><strong>Peel Out</strong>: 300 hipfire kills</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>ASG-89</p>
+            <img src="/Weapon_Photos/ASG-89.webp" alt="ASG-89">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Dream Eater</strong>: 100 enemies killed while affected by your Tactical Equipment</li>
+                    <li><strong>Coin-Op</strong>: 30 Parasite kills</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="light_Machine_Guns">
+    <h2>Light Machine Guns</h2>
+    <div class="weapon_Archetype" id="LMGs">
+        <div>
+            <p>PU-21</p>
+            <img src="/Weapon_Photos/PU-21.webp" alt="PU-21">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Vivid</strong>: 10 Mangler kills</li>
+                    <li><strong>Justice</strong>: 300 hipfire kills</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>XMG</p>
+            <img src="/Weapon_Photos/XMG.webp" alt="XMG">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Hiss</strong>: 10 kills without reloading 15 times</li>
+                    <li><strong>Acid Slide</strong>: 300 kills with Brain Rot equipped</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>GPMG-7</p>
+            <img src="/Weapon_Photos/GPMG-7.webp" alt="GPMG-7">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Impressionist</strong>: 300 point blank kills</li>
+                    <li><strong>Other World</strong>: 10 kills without reloading 15 times</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="marksman_Rifles">
+    <h2>Markman Rifles</h2>
+    <div class="weapon_Archetype" id="MRs">
+        <div>
+            <p>SWAT 5.56</p>
+            <img src="/Weapon_Photos/SWAT.webp" alt="SWAT 5.56">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Hyperspace</strong>: 100 enemies killed while affected by your Tactical Equipment</li>
+                    <li><strong>Wrangler</strong>: 75 Armored Zombie kills</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>Tsarkov 7.62</p>
+            <img src="/Weapon_Photos/Tsarkov.webp" alt="Tsarkov 7.62">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Harvest</strong>: 100 enemies killed while affected by your Tactical Equipment</li>
+                    <li><strong>Desert Sunset</strong>: 300 kills with Dead Wire equipped</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>AEK-973</p>
+            <img src="/Weapon_Photos/AEK.webp" alt="AEK-973">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Blood Moon</strong>: 300 kills with Napalm Burst equipped</li>
+                    <li><strong>Voidflame</strong>: 300 kills with Cryo Freeze equipped</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>DM-10</p>
+            <img src="/Weapon_Photos/DM-10.webp" alt="DM-10">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Furybloom</strong>: 5 critical kills rapidly 15 times</li>
+                    <li><strong>Manta</strong>: 300 kills at Rare rarity or higher</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="sniper_Rifles">
+    <h2>Sniper Rifles</h2>
+    <div class="weapon_Archetype" id="SRs">
+        <div>
+            <p>LW3A1 Frostline</p>
+            <img src="/Weapon_Photos/Frostline.webp" alt="LW3A1 Frostline">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Strata</strong>: 300 kills at Rare rarity or higher</li>
+                    <li><strong>Eventide</strong>: 30 Parasite kills</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>SVD</p>
+            <img src="/Weapon_Photos/SVD.webp" alt="SVD">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Cartridge</strong>: 300 kills while Pack-a-Punched</li>
+                    <li><strong>Integration</strong>: 5 critical kills rapidly 15 times</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>LR 7.62</p>
+            <img src="/Weapon_Photos/LR.webp" alt="LR 7.62">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Foxglove</strong>: 10 Mangler kills</li>
+                    <li><strong>Overcast</strong>: 300 kills with Brain Rot equipped</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="pistols">
+    <h2>Pistols</h2>
+    <div class="weapon_Archetype" id="PSTLs">
+        <div>
+            <p>9mm PM</p>
+            <img src="/Weapon_Photos/9mmPM.webp" alt="9mm PM">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Yottabyte</strong>: 300 kills with Cryo Freeze equipped</li>
+                    <li><strong>Red Ring</strong>: 300 kills with Dead Wire equipped</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>Grekhova</p>
+            <img src="/Weapon_Photos/Grekhova.webp" alt="Grekhova">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Hi-Fi</strong>: 10 Mangler kills</li>
+                    <li><strong>Ceres</strong>: 5 critical kills rapidly 15 times</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>GS45</p>
+            <img src="/Weapon_Photos/GS45.webp" alt="GS45">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Velvetine</strong>: 300 kills at Rare rarity or higher</li>
+                    <li><strong>Siamese</strong>: 300 hipfire kills</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>Stryder .22</p>
+            <img src="/Weapon_Photos/Stryder.22.webp" alt="Stryder .22">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Wavy</strong>: 300 point blank kills</li>
+                    <li><strong>Condemn</strong>: 30 Vermin kills</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="launchers">
+    <h2>Launchers</h2>
+    <div class="weapon_Archetype" id="LNCHRs">
+        <div>
+            <p>CIGMA 2B</p>
+            <img src="/Weapon_Photos/CIGMA2B.webp" alt="CIGMA 2B">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>CBRNE</strong>: 300 kills while Pack-a-Punched</li>
+                    <li><strong>Technique</strong>: 75 Armored Zombie kills</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div><p>HE-1</p>
+            <img src="/Weapon_Photos/HE-1.webp" alt="HE-1">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Decrypt</strong>: 30 Vermin kills</li>
+                    <li><strong>Renewed</strong>: 300 kills at Rare rarity or higher</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="specials">
+    <h2>Specials</h2>
+    <div class="weapon_Archetype" id="SPCLS">
+        <div>
+            <p>Sirin 9mm</p>
+            <img src="/Weapon_Photos/Sirin9mm.webp" alt="Sirin 9mm">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Critical Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Critical Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Critical Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Critical Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Critical Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Critical Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Starsynbc</strong>: 300 hipfire kills</li>
+                    <li><strong>Tempt Fate</strong>: 30 Parasite kills</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="melee_weapons">
+    <h2>Melee Weapons</h2>
+    <div class="weapon_Archetype" id="MWs">
+        <div>
+            <p>Knife</p>
+            <img src="/Weapon_Photos/Knife.webp" alt="Knife">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Dying Bloom</strong>: 300 kills with Brain Rot equipped</li>
+                    <li><strong>Vacation Leopard</strong>: 75 Armored Zombie kills</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>Baseball Bat</p>
+            <img src="/Weapon_Photos/BaseballBat.webp" alt="Baseball Bat">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Banished</strong>: 300 kills at Rare rarity or higher</li>
+                    <li><strong>Contort</strong>: 30 Vermin kills</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>Power Drill</p>
+            <img src="/Weapon_Photos/PowerDrill.webp" alt="Power Drill">
+            <button class="expandButton">Show Challenges and Camos</button>
+            <div class="camos">
+                <h3>Military Camos:</h3>
+                <ul>
+                    <li><strong>Slate</strong>: Get 100 Kills</li>
+                    <li><strong>Desert</strong>: Get 200 Kills</li>
+                    <li><strong>Evergreen</strong>: Get 300 Kills</li>
+                    <li><strong>Rugged</strong>: Get 400 Kills</li>
+                    <li><strong>Grim</strong>: Get 600 Kills</li>
+                    <li><strong>Stripe</strong>: Get 800 Kills</li>
+                    <li><strong>Oceanic</strong>: Get 1,000 Kills</li>
+                    <li><strong>Whiteout</strong>: Get 1,500 Kills</li>
+                    <li><strong>Purple Tiger</strong>: Get 2,000 Kills</li>
+                </ul>
+                <h3>Special Camos:</h3>
+                <ul>
+                    <li><strong>Glimmering Grove</strong>: 300 kills at Rare rarity or higher</li>
+                    <li><strong>Shimmer</strong>: 10 Mangler kills</li>
+                </ul>
+                <h3>Mastery Camos:</h3>
+                <ul>
+                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times</li>
+                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations</li>
+                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times</li>
+                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>
