@@ -84,7 +84,8 @@ const specialCamoRequirements = {
     jackalpdw: [
         { id: 'jackalpdwSpecial1Progress', requiredKills: 300, specialKey: 'special1Kills' },
         { id: 'jackalpdwSpecial2Progress', requiredKills: 300, specialKey: 'special2Kills' },
-    ],kompakt92: [
+    ],
+    kompakt92: [
         { id: 'kompakt92Special1Progress', requiredKills: 300, specialKey: 'special1Kills' },
         { id: 'kompakt92Special2Progress', requiredKills: 300, specialKey: 'special2Kills' },
     ],
@@ -156,9 +157,9 @@ const specialCamoRequirements = {
         { id: 'stryder22Special1Progress', requiredKills: 300, specialKey: 'special1Kills' },
         { id: 'stryder22Special2Progress', requiredKills: 30, specialKey: 'special2Kills' },
     ],
-    cigma28: [
-        { id: 'cigma28Special1Progress', requiredKills: 300, specialKey: 'special1Kills' },
-        { id: 'cigma28Special2Progress', requiredKills: 75, specialKey: 'special2Kills' },
+    cigma2b: [
+        { id: 'cigma2bSpecial1Progress', requiredKills: 300, specialKey: 'special1Kills' },
+        { id: 'cigma2bSpecial2Progress', requiredKills: 75, specialKey: 'special2Kills' },
     ],
     he1: [
         { id: 'he1Special1Progress', requiredKills: 30, specialKey: 'special1Kills' },
@@ -170,7 +171,7 @@ const specialCamoRequirements = {
     ],
     knife: [
         { id: 'knifeSpecial1Progress', requiredKills: 300, specialKey: 'special1Kills' },
-        { id: 'knifeSpecial2Progress', requiredKills: 30, specialKey: 'special2Kills' },
+        { id: 'knifeSpecial2Progress', requiredKills: 75, specialKey: 'special2Kills' },
     ],
     baseballbat: [
         { id: 'baseballbatSpecial1Progress', requiredKills: 300, specialKey: 'special1Kills' },
@@ -178,7 +179,7 @@ const specialCamoRequirements = {
     ],
     powerdrill: [
         { id: 'powerdrillSpecial1Progress', requiredKills: 300, specialKey: 'special1Kills' },
-        { id: 'powerdrillSpecial2Progress', requiredKills: 30, specialKey: 'special2Kills' },
+        { id: 'powerdrillSpecial2Progress', requiredKills: 10, specialKey: 'special2Kills' },
     ],
 }
 
