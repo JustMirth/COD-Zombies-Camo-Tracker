@@ -213,7 +213,7 @@ function updateMasteryCamoProgress(weapon, camoNum, completedKills) {
     const progressElement = document.getElementById(camo.id);
     const canvas = document.getElementById(camo.canvasId);
     if (completedKills >= camo.requiredKills) {
-        progressElement.textContent = ` - Progress: Completed (${completedKills} / ${camo.requiredKills})`;
+        progressElement.textContent = ` - Progress: Completed`;
     } else {
         progressElement.textContent = ` - Progress: ${completedKills} / ${camo.requiredKills}`;
     }
