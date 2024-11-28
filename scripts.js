@@ -84,8 +84,7 @@ const specialCamoRequirements = {
     jackalpdw: [
         { id: 'jackalpdwSpecial1Progress', requiredKills: 300, specialKey: 'special1Kills' },
         { id: 'jackalpdwSpecial2Progress', requiredKills: 300, specialKey: 'special2Kills' },
-    ],
-    kompakt92: [
+    ],kompakt92: [
         { id: 'kompakt92Special1Progress', requiredKills: 300, specialKey: 'special1Kills' },
         { id: 'kompakt92Special2Progress', requiredKills: 300, specialKey: 'special2Kills' },
     ],
@@ -263,7 +262,7 @@ function loadSpecialCamoProgress(weapon, specialCamoNum) {
     if (savedKills) {
         const completedKillsInput = document.getElementById(`${weapon}Special${specialCamoNum}Kills`);
         completedKillsInput.value = savedKills;
-        updateSpecialCamoProgress(weapon, parseInt(localStorage.getItem(`${weapon}CompletedKills`)), specialKills);
+        updateSpecialCamoProgress(weapon, specialCamoNum, parseInt(savedKills));
     }
 }
 
@@ -278,7 +277,7 @@ function loadMasteryCamoProgress(weapon, camoNum) {
     }
 }
 
-//Weapons List
+//Weapons
 const weapons = [
     'xm4', 'ak74', 'ames85', 'gpr91', 'modell', 'goblinmk2', 'asval', 'krigc', 
     'c9', 'ksv', 'tanto22', 'pp919', 'jackalpdw', 'kompakt92', 'saug', 
@@ -292,24 +291,24 @@ const weapons = [
     'knife', 'baseballbat', 'powerdrill'
 ];
 
-//Attach Buttons to Save Progress
 function attachButtonListeners() {
     weapons.forEach(weapon => {
         // Military camo buttons
         document.getElementById(`save${weapon}ProgressButton`).addEventListener('click', () => saveWeaponProgress(weapon));
       
-        // Special camo buttons
+        // Special camo buttons (1 and 2)
         for (let i = 1; i <= 2; i++) {
             document.getElementById(`save${weapon}Special${i}ProgressButton`).addEventListener('click', () => saveSpecialCamoProgress(weapon, i));
         }
       
-        // Mastery camo buttons
+        // Mastery camo buttons (1 to 4)
         for (let i = 1; i <= 4; i++) {
             document.getElementById(`save${weapon}Mastery${i}ProgressButton`).addEventListener('click', () => saveMasteryCamoProgress(weapon, i));
         }
     });
 }
 attachButtonListeners();
+
 
 //On Page Load
 function loadAll(weapon) {
