@@ -84,7 +84,8 @@ const specialCamoRequirements = {
     jackalpdw: [
         { id: 'jackalpdwSpecial1Progress', requiredKills: 300, specialKey: 'special1Kills' },
         { id: 'jackalpdwSpecial2Progress', requiredKills: 300, specialKey: 'special2Kills' },
-    ],kompakt92: [
+    ],
+    kompakt92: [
         { id: 'kompakt92Special1Progress', requiredKills: 300, specialKey: 'special1Kills' },
         { id: 'kompakt92Special2Progress', requiredKills: 300, specialKey: 'special2Kills' },
     ],
@@ -277,6 +278,39 @@ function loadMasteryCamoProgress(weapon, camoNum) {
     }
 }
 
+//Weapons List
+const weapons = [
+    'xm4', 'ak74', 'ames85', 'gpr91', 'modell', 'goblinmk2', 'asval', 'krigc', 
+    'c9', 'ksv', 'tanto22', 'pp919', 'jackalpdw', 'kompakt92', 'saug', 
+    'marinesp', 'asg89',
+    'pu21', 'xmg', 'gpmg7',
+    'swat556', 'tsarkov762', 'aek973', 'dm10',
+    'lw3a1frostline', 'svd', 'lr762',
+    'mmpm', 'grekhova', 'gs45', 'stryder22',
+    'cigma28', 'he1', 
+    'sirin9mm', 
+    'knife', 'baseballbat', 'powerdrill'
+];
+
+//Attach Buttons to Save Progress
+function attachButtonListeners() {
+    weapons.forEach(weapon => {
+        // Military camo buttons
+        document.getElementById(`save${weapon}ProgressButton`).addEventListener('click', () => saveWeaponProgress(weapon));
+      
+        // Special camo buttons (1 and 2)
+        for (let i = 1; i <= 2; i++) {
+            document.getElementById(`save${weapon}Special${i}ProgressButton`).addEventListener('click', () => saveSpecialCamoProgress(weapon, i));
+        }
+      
+        // Mastery camo buttons (1 to 4)
+        for (let i = 1; i <= 4; i++) {
+            document.getElementById(`save${weapon}Mastery${i}ProgressButton`).addEventListener('click', () => saveMasteryCamoProgress(weapon, i));
+        }
+    });
+}
+attachButtonListeners();
+
 //On Page Load
 function loadAll(weapon) {
     loadWeaponProgress(weapon); 
@@ -288,160 +322,7 @@ function loadAll(weapon) {
     loadMasteryCamoProgress(weapon, 4);
 }
 
-//Save Progress buttons for Militaries Camos
-document.getElementById('savexm4ProgressButton').addEventListener('click', () => saveWeaponProgress('xm4'));
-document.getElementById('saveak74ProgressButton').addEventListener('click', () => saveWeaponProgress('ak74'));
-document.getElementById('saveames85ProgressButton').addEventListener('click', () => saveWeaponProgress('ames85'));
-document.getElementById('savegpr91ProgressButton').addEventListener('click', () => saveWeaponProgress('gpr91'));
-document.getElementById('savemodellProgressButton').addEventListener('click', () => saveWeaponProgress('modell'));
-document.getElementById('savegoblinmk2ProgressButton').addEventListener('click', () => saveWeaponProgress('goblinmk2'));
-document.getElementById('saveasvalProgressButton').addEventListener('click', () => saveWeaponProgress('asval'));
-document.getElementById('savekrigcProgressButton').addEventListener('click', () => saveWeaponProgress('krigc'));
-document.getElementById('savec9ProgressButton').addEventListener('click', () => saveWeaponProgress('c9'));
-document.getElementById('saveksvProgressButton').addEventListener('click', () => saveWeaponProgress('ksv'));
-document.getElementById('savetanto22ProgressButton').addEventListener('click', () => saveWeaponProgress('tanto22'));
-document.getElementById('savepp919ProgressButton').addEventListener('click', () => saveWeaponProgress('pp919'));
-document.getElementById('savejackalpdwProgressButton').addEventListener('click', () => saveWeaponProgress('jackalpdw'));
-document.getElementById('savekompakt92ProgressButton').addEventListener('click', () => saveWeaponProgress('kompakt92'));
-document.getElementById('savesaugProgressButton').addEventListener('click', () => saveWeaponProgress('saug'));
-
-//Save Progress buttons for Special Camos
-document.getElementById('savexm4Special1ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('xm4', 1));
-document.getElementById('savexm4Special2ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('xm4', 2));
-
-document.getElementById('saveak74Special1ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('ak74', 1));
-document.getElementById('saveak74Special2ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('ak74', 2));
-
-document.getElementById('saveames85Special1ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('ames85', 1));
-document.getElementById('saveames85Special2ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('ames85', 2));
-
-document.getElementById('savegpr91Special1ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('gpr91', 1));
-document.getElementById('savegpr91Special2ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('gpr91', 2));
-
-document.getElementById('savemodellSpecial1ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('modell', 1));
-document.getElementById('savemodellSpecial2ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('modell', 2));
-
-document.getElementById('savegoblinmk2Special1ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('goblinmk2', 1));
-document.getElementById('savegoblinmk2Special2ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('goblinmk2', 2));
-
-document.getElementById('saveasvalSpecial1ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('asval', 1));
-document.getElementById('saveasvalSpecial2ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('asval', 2));
-
-document.getElementById('savekrigcSpecial1ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('krigc', 1));
-document.getElementById('savekrigcSpecial2ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('krigc', 2));
-
-document.getElementById('savec9Special1ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('c9', 1));
-document.getElementById('savec9Special2ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('c9', 2));
-
-document.getElementById('saveksvSpecial1ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('ksv', 1));
-document.getElementById('saveksvSpecial2ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('ksv', 2));
-
-document.getElementById('savetanto22Special1ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('tanto22', 1));
-document.getElementById('savetanto22Special2ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('tanto22', 2));
-
-document.getElementById('savepp919Special1ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('pp919', 1));
-document.getElementById('savepp919Special2ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('pp919', 2));
-
-document.getElementById('savejackalpdwSpecial1ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('jackalpdw', 1));
-document.getElementById('savejackalpdwSpecial2ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('jackalpdw', 2));
-
-document.getElementById('savekompakt92Special1ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('kompakt92', 1));
-document.getElementById('savekompakt92Special2ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('kompakt92', 2));
-
-document.getElementById('savesaugSpecial1ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('saug', 1));
-document.getElementById('savesaugSpecial2ProgressButton').addEventListener('click', () => saveSpecialCamoProgress('saug', 2));
-
-//Save Progress buttons for Mastery Camos
-document.getElementById('savexm4Mastery1ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('xm4', 1));
-document.getElementById('savexm4Mastery2ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('xm4', 2));
-document.getElementById('savexm4Mastery3ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('xm4', 3));
-document.getElementById('savexm4Mastery4ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('xm4', 4));
-
-document.getElementById('saveak74Mastery1ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('ak74', 1));
-document.getElementById('saveak74Mastery2ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('ak74', 2));
-document.getElementById('saveak74Mastery3ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('ak74', 3));
-document.getElementById('saveak74Mastery4ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('ak74', 4));
-
-document.getElementById('saveames85Mastery1ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('ames85', 1));
-document.getElementById('saveames85Mastery2ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('ames85', 2));
-document.getElementById('saveames85Mastery3ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('ames85', 3));
-document.getElementById('saveames85Mastery4ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('ames85', 4));
-
-document.getElementById('savegpr91Mastery1ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('gpr91', 1));
-document.getElementById('savegpr91Mastery2ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('gpr91', 2));
-document.getElementById('savegpr91Mastery3ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('gpr91', 3));
-document.getElementById('savegpr91Mastery4ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('gpr91', 4));
-
-document.getElementById('savemodellMastery1ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('modell', 1));
-document.getElementById('savemodellMastery2ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('modell', 2));
-document.getElementById('savemodellMastery3ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('modell', 3));
-document.getElementById('savemodellMastery4ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('modell', 4));
-
-document.getElementById('savegoblinmk2Mastery1ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('goblinmk2', 1));
-document.getElementById('savegoblinmk2Mastery2ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('goblinmk2', 2));
-document.getElementById('savegoblinmk2Mastery3ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('goblinmk2', 3));
-document.getElementById('savegoblinmk2Mastery4ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('goblinmk2', 4));
-
-document.getElementById('saveasvalMastery1ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('asval', 1));
-document.getElementById('saveasvalMastery2ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('asval', 2));
-document.getElementById('saveasvalMastery3ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('asval', 3));
-document.getElementById('saveasvalMastery4ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('asval', 4));
-
-document.getElementById('savekrigcMastery1ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('krigc', 1));
-document.getElementById('savekrigcMastery2ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('krigc', 2));
-document.getElementById('savekrigcMastery3ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('krigc', 3));
-document.getElementById('savekrigcMastery4ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('krigc', 4));
-
-document.getElementById('savec9Mastery1ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('c9', 1));
-document.getElementById('savec9Mastery2ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('c9', 2));
-document.getElementById('savec9Mastery3ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('c9', 3));
-document.getElementById('savec9Mastery4ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('c9', 4));
-
-document.getElementById('saveksvMastery1ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('ksv', 1));
-document.getElementById('saveksvMastery2ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('ksv', 2));
-document.getElementById('saveksvMastery3ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('ksv', 3));
-document.getElementById('saveksvMastery4ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('ksv', 4));
-
-document.getElementById('savetanto22Mastery1ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('tanto22', 1));
-document.getElementById('savetanto22Mastery2ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('tanto22', 2));
-document.getElementById('savetanto22Mastery3ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('tanto22', 3));
-document.getElementById('savetanto22Mastery4ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('tanto22', 4));
-
-document.getElementById('savepp919Mastery1ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('pp919', 1));
-document.getElementById('savepp919Mastery2ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('pp919', 2));
-document.getElementById('savepp919Mastery3ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('pp919', 3));
-document.getElementById('savepp919Mastery4ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('pp919', 4));
-
-document.getElementById('savejackalpdwMastery1ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('jackalpdw', 1));
-document.getElementById('savejackalpdwMastery2ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('jackalpdw', 2));
-document.getElementById('savejackalpdwMastery3ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('jackalpdw', 3));
-document.getElementById('savejackalpdwMastery4ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('jackalpdw', 4));
-
-document.getElementById('savekompakt92Mastery1ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('kompakt92', 1));
-document.getElementById('savekompakt92Mastery2ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('kompakt92', 2));
-document.getElementById('savekompakt92Mastery3ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('kompakt92', 3));
-document.getElementById('savekompakt92Mastery4ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('kompakt92', 4));
-
-document.getElementById('savesaugMastery1ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('saug', 1));
-document.getElementById('savesaugMastery2ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('saug', 2));
-document.getElementById('savesaugMastery3ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('saug', 3));
-document.getElementById('savesaugMastery4ProgressButton').addEventListener('click', () => saveMasteryCamoProgress('saug', 4));
-
 //Onload retrieve localStorage
 window.onload = () => {
-    loadAll('xm4');
-    loadAll('ak47');
-    loadAll('ames85');
-    loadAll('gpr91');
-    loadAll('modell');
-    loadAll('goblinmk2');
-    loadAll('asval');
-    loadAll('krigc');
-    loadAll('c9');
-    loadAll('ksv');
-    loadAll('tanto22');
-    loadAll('pp919');
-    loadAll('jackalpdw');
-    loadAll('kompakt92');
-    loadAll('saug');
+    weapons.forEach(weapon => loadAll(weapon));
 }
