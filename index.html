@@ -3475,15 +3475,51 @@
             <div class="camos">
                 <h3>Military Camos:</h3>
                 <ul>
-                    <li><strong>Slate</strong>: Get 100 Critical Kills <span id="mmpmSlateProgress"></span></li>
-                    <li><strong>Desert</strong>: Get 200 Critical Kills <span id="mmpmDesertProgress"></span></li>
-                    <li><strong>Evergreen</strong>: Get 300 Critical Kills <span id="mmpmEvergreenProgress"></span></li>
-                    <li><strong>Rugged</strong>: Get 400 Critical Kills <span id="mmpmRuggedProgress"></span></li>
-                    <li><strong>Grim</strong>: Get 600 Critical Kills <span id="mmpmGrimProgress"></span></li>
-                    <li><strong>Stripe</strong>: Get 800 Critical Kills <span id="mmpmStripeProgress"></span></li>
-                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills <span id="mmpmOceanicProgress"></span></li>
-                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills <span id="mmpmWhiteoutProgress"></span></li>
-                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills <span id="mmpmPurpleTigerProgress"></span></li>
+                    <li>
+                        <strong>Slate</strong>: Get 100 Critical Kills 
+                        <span id="mmpmSlateProgress"></span>
+                        <canvas id="mmpmSlateCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Desert</strong>: Get 200 Critical Kills 
+                        <span id="mmpmDesertProgress"></span>
+                        <canvas id="mmpmDesertCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Evergreen</strong>: Get 300 Critical Kills 
+                        <span id="mmpmEvergreenProgress"></span>
+                        <canvas id="mmpmEvergreenCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Rugged</strong>: Get 400 Critical Kills 
+                        <span id="mmpmRuggedProgress"></span>
+                        <canvas id="mmpmRuggedCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Grim</strong>: Get 600 Critical Kills 
+                        <span id="mmpmGrimProgress"></span>
+                        <canvas id="mmpmGrimCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Stripe</strong>: Get 800 Critical Kills 
+                        <span id="mmpmStripeProgress"></span>
+                        <canvas id="mmpmStripeCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Oceanic</strong>: Get 1,000 Critical Kills 
+                        <span id="mmpmOceanicProgress"></span>
+                        <canvas id="mmpmOceanicCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Whiteout</strong>: Get 1,500 Critical Kills 
+                        <span id="mmpmWhiteoutProgress"></span>
+                        <canvas id="mmpmWhiteoutCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Purple Tiger</strong>: Get 2,000 Critical Kills 
+                        <span id="mmpmPurpleTigerProgress"></span>
+                        <canvas id="mmpmPurpleTigerCanvas"></canvas>
+                    </li>
                 </ul>
                 <div>
                     <label for="mmpmCompletedKills">Enter completed Critical Kills for 9mm PM:</label>
@@ -3492,13 +3528,21 @@
                 </div>
                 <h3>Special Camos:</h3>
                 <ul>
-                    <li><strong>Yottabyte</strong>: 300 kills with Cryo Freeze equipped<span id="mmpmSpecial1Progress"></span></li>
+                    <li>
+                        <strong>Yottabyte</strong>: 300 kills with Cryo Freeze equipped
+                        <span id="mmpmSpecial1Progress"></span>
+                        <canvas id="mmpmSpecial1Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="mmpmSpecial1Kills">Enter completed kills for Special 1:</label>
                         <input type="number" id="mmpmSpecial1Kills" min="0" placeholder="Enter kills">
                         <button id="savemmpmSpecial1ProgressButton">Save Special 1 Progress</button>
                     </div>
-                    <li><strong>Red Ring</strong>: 300 kills with Dead Wire equipped<span id="mmpmSpecial2Progress"></span></li>
+                    <li>
+                        <strong>Red Ring</strong>: 300 kills with Dead Wire equipped
+                        <span id="mmpmSpecial2Progress"></span>
+                        <canvas id="mmpmSpecial2Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="mmpmSpecial2Kills">Enter completed kills for Special 2:</label>
                         <input type="number" id="mmpmSpecial2Kills" min="0" placeholder="Enter kills">
@@ -3507,25 +3551,41 @@
                 </ul>
                 <h3>Mastery Camos:</h3>
                 <ul>
-                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times<span id="mmpmMastery1Progress"></span></li>
+                    <li>
+                        <strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times
+                        <span id="mmpmMastery1Progress"></span>
+                        <canvas id="mmpmMastery1Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="mmpmMastery1Kills">Enter completed kills for Mastery 1:</label>
                         <input type="number" id="mmpmMastery1Kills" min="0" placeholder="Enter kills">
                         <button id="savemmpmMastery1ProgressButton">Save Mastery 1 Progress</button>
                     </div>
-                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations<span id="mmpmMastery2Progress"></span></li>
+                    <li>
+                        <strong>Opal</strong>: Get 30 Special Zombie Eliminations
+                        <span id="mmpmMastery2Progress"></span>
+                        <canvas id="mmpmMastery2Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="mmpmMastery2Kills">Enter completed kills for Mastery 2:</label>
                         <input type="number" id="mmpmMastery2Kills" min="0" placeholder="Enter kills">
                         <button id="savemmpmMastery2ProgressButton">Save Mastery 2 Progress</button>
                     </div>
-                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times<span id="mmpmMastery3Progress"></span></li>
+                    <li>
+                        <strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times
+                        <span id="mmpmMastery3Progress"></span>
+                        <canvas id="mmpmMastery3Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="mmpmMastery3Kills">Enter completed kills for Mastery 3:</label>
                         <input type="number" id="mmpmMastery3Kills" min="0" placeholder="Enter kills">
                         <button id="savemmpmMastery3ProgressButton">Save Mastery 3 Progress</button>
                     </div>
-                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills<span id="mmpmMastery4Progress"></span></li>
+                    <li>
+                        <strong>Nebula</strong>: Get 10 Elite Zombie Kills
+                        <span id="mmpmMastery4Progress"></span>
+                        <canvas id="mmpmMastery4Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="mmpmMastery4Kills">Enter completed kills for Mastery 4:</label>
                         <input type="number" id="mmpmMastery4Kills" min="0" placeholder="Enter kills">
@@ -3541,15 +3601,51 @@
             <div class="camos">
                 <h3>Military Camos:</h3>
                 <ul>
-                    <li><strong>Slate</strong>: Get 100 Critical Kills <span id="grekhovaSlateProgress"></span></li>
-                    <li><strong>Desert</strong>: Get 200 Critical Kills <span id="grekhovaDesertProgress"></span></li>
-                    <li><strong>Evergreen</strong>: Get 300 Critical Kills <span id="grekhovaEvergreenProgress"></span></li>
-                    <li><strong>Rugged</strong>: Get 400 Critical Kills <span id="grekhovaRuggedProgress"></span></li>
-                    <li><strong>Grim</strong>: Get 600 Critical Kills <span id="grekhovaGrimProgress"></span></li>
-                    <li><strong>Stripe</strong>: Get 800 Critical Kills <span id="grekhovaStripeProgress"></span></li>
-                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills <span id="grekhovaOceanicProgress"></span></li>
-                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills <span id="grekhovaWhiteoutProgress"></span></li>
-                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills <span id="grekhovaPurpleTigerProgress"></span></li>
+                    <li>
+                        <strong>Slate</strong>: Get 100 Critical Kills 
+                        <span id="grekhovaSlateProgress"></span>
+                        <canvas id="grekhovaSlateCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Desert</strong>: Get 200 Critical Kills 
+                        <span id="grekhovaDesertProgress"></span>
+                        <canvas id="grekhovaDesertCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Evergreen</strong>: Get 300 Critical Kills 
+                        <span id="grekhovaEvergreenProgress"></span>
+                        <canvas id="grekhovaEvergreenCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Rugged</strong>: Get 400 Critical Kills 
+                        <span id="grekhovaRuggedProgress"></span>
+                        <canvas id="grekhovaRuggedCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Grim</strong>: Get 600 Critical Kills 
+                        <span id="grekhovaGrimProgress"></span>
+                        <canvas id="grekhovaGrimCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Stripe</strong>: Get 800 Critical Kills 
+                        <span id="grekhovaStripeProgress"></span>
+                        <canvas id="grekhovaStripeCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Oceanic</strong>: Get 1,000 Critical Kills 
+                        <span id="grekhovaOceanicProgress"></span>
+                        <canvas id="grekhovaOceanicCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Whiteout</strong>: Get 1,500 Critical Kills 
+                        <span id="grekhovaWhiteoutProgress"></span>
+                        <canvas id="grekhovaWhiteoutCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Purple Tiger</strong>: Get 2,000 Critical Kills 
+                        <span id="grekhovaPurpleTigerProgress"></span>
+                        <canvas id="grekhovaPurpleTigerCanvas"></canvas>
+                    </li>
                 </ul>
                 <div>
                     <label for="grekhovaCompletedKills">Enter completed Critical Kills for Grekhova:</label>
@@ -3558,13 +3654,21 @@
                 </div>
                 <h3>Special Camos:</h3>
                 <ul>
-                    <li><strong>Hi-Fi</strong>: 10 Mangler kills<span id="grekhovaSpecial1Progress"></span></li>
+                    <li>
+                        <strong>Hi-Fi</strong>: 10 Mangler kills
+                        <span id="grekhovaSpecial1Progress"></span>
+                        <canvas id="grekhovaSpecial1Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="grekhovaSpecial1Kills">Enter completed kills for Special 1:</label>
                         <input type="number" id="grekhovaSpecial1Kills" min="0" placeholder="Enter kills">
                         <button id="savegrekhovaSpecial1ProgressButton">Save Special 1 Progress</button>
                     </div>
-                    <li><strong>Ceres</strong>: 5 critical kills rapidly 15 times<span id="grekhovaSpecial2Progress"></span></li>
+                    <li>
+                        <strong>Ceres</strong>: 5 critical kills rapidly 15 times
+                        <span id="grekhovaSpecial2Progress"></span>
+                        <canvas id="grekhovaSpecial2Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="grekhovaSpecial2Kills">Enter completed kills for Special 2:</label>
                         <input type="number" id="grekhovaSpecial2Kills" min="0" placeholder="Enter kills">
@@ -3573,25 +3677,41 @@
                 </ul>
                 <h3>Mastery Camos:</h3>
                 <ul>
-                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times<span id="grekhovaMastery1Progress"></span></li>
+                    <li>
+                        <strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times
+                        <span id="grekhovaMastery1Progress"></span>
+                        <canvas id="grekhovaMastery1Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="grekhovaMastery1Kills">Enter completed kills for Mastery 1:</label>
                         <input type="number" id="grekhovaMastery1Kills" min="0" placeholder="Enter kills">
                         <button id="savegrekhovaMastery1ProgressButton">Save Mastery 1 Progress</button>
                     </div>
-                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations<span id="grekhovaMastery2Progress"></span></li>
+                    <li>
+                        <strong>Opal</strong>: Get 30 Special Zombie Eliminations
+                        <span id="grekhovaMastery2Progress"></span>
+                        <canvas id="grekhovaMastery2Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="grekhovaMastery2Kills">Enter completed kills for Mastery 2:</label>
                         <input type="number" id="grekhovaMastery2Kills" min="0" placeholder="Enter kills">
                         <button id="savegrekhovaMastery2ProgressButton">Save Mastery 2 Progress</button>
                     </div>
-                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times<span id="grekhovaMastery3Progress"></span></li>
+                    <li>
+                        <strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times
+                        <span id="grekhovaMastery3Progress"></span>
+                        <canvas id="grekhovaMastery3Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="grekhovaMastery3Kills">Enter completed kills for Mastery 3:</label>
                         <input type="number" id="grekhovaMastery3Kills" min="0" placeholder="Enter kills">
                         <button id="savegrekhovaMastery3ProgressButton">Save Mastery 3 Progress</button>
                     </div>
-                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills<span id="grekhovaMastery4Progress"></span></li>
+                    <li>
+                        <strong>Nebula</strong>: Get 10 Elite Zombie Kills
+                        <span id="grekhovaMastery4Progress"></span>
+                        <canvas id="grekhovaMastery4Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="grekhovaMastery4Kills">Enter completed kills for Mastery 4:</label>
                         <input type="number" id="grekhovaMastery4Kills" min="0" placeholder="Enter kills">
@@ -3607,15 +3727,51 @@
             <div class="camos">
                 <h3>Military Camos:</h3>
                 <ul>
-                    <li><strong>Slate</strong>: Get 100 Critical Kills <span id="gs45SlateProgress"></span></li>
-                    <li><strong>Desert</strong>: Get 200 Critical Kills <span id="gs45DesertProgress"></span></li>
-                    <li><strong>Evergreen</strong>: Get 300 Critical Kills <span id="gs45EvergreenProgress"></span></li>
-                    <li><strong>Rugged</strong>: Get 400 Critical Kills <span id="gs45RuggedProgress"></span></li>
-                    <li><strong>Grim</strong>: Get 600 Critical Kills <span id="gs45GrimProgress"></span></li>
-                    <li><strong>Stripe</strong>: Get 800 Critical Kills <span id="gs45StripeProgress"></span></li>
-                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills <span id="gs45OceanicProgress"></span></li>
-                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills <span id="gs45WhiteoutProgress"></span></li>
-                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills <span id="gs45PurpleTigerProgress"></span></li>
+                    <li>
+                        <strong>Slate</strong>: Get 100 Critical Kills 
+                        <span id="gs45SlateProgress"></span>
+                        <canvas id="gs45SlateCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Desert</strong>: Get 200 Critical Kills 
+                        <span id="gs45DesertProgress"></span>
+                        <canvas id="gs45DesertCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Evergreen</strong>: Get 300 Critical Kills 
+                        <span id="gs45EvergreenProgress"></span>
+                        <canvas id="gs45EvergreenCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Rugged</strong>: Get 400 Critical Kills 
+                        <span id="gs45RuggedProgress"></span>
+                        <canvas id="gs45RuggedCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Grim</strong>: Get 600 Critical Kills 
+                        <span id="gs45GrimProgress"></span>
+                        <canvas id="gs45GrimCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Stripe</strong>: Get 800 Critical Kills 
+                        <span id="gs45StripeProgress"></span>
+                        <canvas id="gs45StripeCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Oceanic</strong>: Get 1,000 Critical Kills 
+                        <span id="gs45OceanicProgress"></span>
+                        <canvas id="gs45OceanicCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Whiteout</strong>: Get 1,500 Critical Kills 
+                        <span id="gs45WhiteoutProgress"></span>
+                        <canvas id="gs45WhiteoutCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Purple Tiger</strong>: Get 2,000 Critical Kills 
+                        <span id="gs45PurpleTigerProgress"></span>
+                        <canvas id="gs45PurpleTigerCanvas"></canvas>
+                    </li>
                 </ul>
                 <div>
                     <label for="gs45CompletedKills">Enter completed Critical Kills for GS45:</label>
@@ -3624,13 +3780,21 @@
                 </div>
                 <h3>Special Camos:</h3>
                 <ul>
-                    <li><strong>Velvetine</strong>: 300 kills at Rare rarity or higher<span id="gs45Special1Progress"></span></li>
+                    <li>
+                        <strong>Velvetine</strong>: 300 kills at Rare rarity or higher
+                        <span id="gs45Special1Progress"></span>
+                        <canvas id="gs45Special1Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="gs45Special1Kills">Enter completed kills for Special 1:</label>
                         <input type="number" id="gs45Special1Kills" min="0" placeholder="Enter kills">
                         <button id="savegs45Special1ProgressButton">Save Special 1 Progress</button>
                     </div>
-                    <li><strong>Siamese</strong>: 300 hipfire kills<span id="gs45Special2Progress"></span></li>
+                    <li>
+                        <strong>Siamese</strong>: 300 hipfire kills
+                        <span id="gs45Special2Progress"></span>
+                        <canvas id="gs45Special2Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="gs45Special2Kills">Enter completed kills for Special 2:</label>
                         <input type="number" id="gs45Special2Kills" min="0" placeholder="Enter kills">
@@ -3639,25 +3803,41 @@
                 </ul>
                 <h3>Mastery Camos:</h3>
                 <ul>
-                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times<span id="gs45Mastery1Progress"></span></li>
+                    <li>
+                        <strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times
+                        <span id="gs45Mastery1Progress"></span>
+                        <canvas id="gs45Mastery1Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="gs45Mastery1Kills">Enter completed kills for Mastery 1:</label>
                         <input type="number" id="gs45Mastery1Kills" min="0" placeholder="Enter kills">
                         <button id="savegs45Mastery1ProgressButton">Save Mastery 1 Progress</button>
                     </div>
-                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations<span id="gs45Mastery2Progress"></span></li>
+                    <li>
+                        <strong>Opal</strong>: Get 30 Special Zombie Eliminations
+                        <span id="gs45Mastery2Progress"></span>
+                        <canvas id="gs45Mastery2Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="gs45Mastery2Kills">Enter completed kills for Mastery 2:</label>
                         <input type="number" id="gs45Mastery2Kills" min="0" placeholder="Enter kills">
                         <button id="savegs45Mastery2ProgressButton">Save Mastery 2 Progress</button>
                     </div>
-                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times<span id="gs45Mastery3Progress"></span></li>
+                    <li>
+                        <strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times
+                        <span id="gs45Mastery3Progress"></span>
+                        <canvas id="gs45Mastery3Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="gs45Mastery3Kills">Enter completed kills for Mastery 3:</label>
                         <input type="number" id="gs45Mastery3Kills" min="0" placeholder="Enter kills">
                         <button id="savegs45Mastery3ProgressButton">Save Mastery 3 Progress</button>
                     </div>
-                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills<span id="gs45Mastery4Progress"></span></li>
+                    <li>
+                        <strong>Nebula</strong>: Get 10 Elite Zombie Kills
+                        <span id="gs45Mastery4Progress"></span>
+                        <canvas id="gs45Mastery4Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="gs45Mastery4Kills">Enter completed kills for Mastery 4:</label>
                         <input type="number" id="gs45Mastery4Kills" min="0" placeholder="Enter kills">
@@ -3673,15 +3853,51 @@
             <div class="camos">
                 <h3>Military Camos:</h3>
                 <ul>
-                    <li><strong>Slate</strong>: Get 100 Critical Kills <span id="stryder22SlateProgress"></span></li>
-                    <li><strong>Desert</strong>: Get 200 Critical Kills <span id="stryder22DesertProgress"></span></li>
-                    <li><strong>Evergreen</strong>: Get 300 Critical Kills <span id="stryder22EvergreenProgress"></span></li>
-                    <li><strong>Rugged</strong>: Get 400 Critical Kills <span id="stryder22RuggedProgress"></span></li>
-                    <li><strong>Grim</strong>: Get 600 Critical Kills <span id="stryder22GrimProgress"></span></li>
-                    <li><strong>Stripe</strong>: Get 800 Critical Kills <span id="stryder22StripeProgress"></span></li>
-                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills <span id="stryder22OceanicProgress"></span></li>
-                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills <span id="stryder22WhiteoutProgress"></span></li>
-                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills <span id="stryder22PurpleTigerProgress"></span></li>
+                    <li>
+                        <strong>Slate</strong>: Get 100 Critical Kills 
+                        <span id="stryder22SlateProgress"></span>
+                        <canvas id="stryder22SlateCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Desert</strong>: Get 200 Critical Kills 
+                        <span id="stryder22DesertProgress"></span>
+                        <canvas id="stryder22DesertCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Evergreen</strong>: Get 300 Critical Kills 
+                        <span id="stryder22EvergreenProgress"></span>
+                        <canvas id="stryder22EvergreenCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Rugged</strong>: Get 400 Critical Kills 
+                        <span id="stryder22RuggedProgress"></span>
+                        <canvas id="stryder22RuggedCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Grim</strong>: Get 600 Critical Kills 
+                        <span id="stryder22GrimProgress"></span>
+                        <canvas id="stryder22GrimCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Stripe</strong>: Get 800 Critical Kills 
+                        <span id="stryder22StripeProgress"></span>
+                        <canvas id="stryder22StripeCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Oceanic</strong>: Get 1,000 Critical Kills 
+                        <span id="stryder22OceanicProgress"></span>
+                        <canvas id="stryder22OceanicCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Whiteout</strong>: Get 1,500 Critical Kills 
+                        <span id="stryder22WhiteoutProgress"></span>
+                        <canvas id="stryder22WhiteoutCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Purple Tiger</strong>: Get 2,000 Critical Kills 
+                        <span id="stryder22PurpleTigerProgress"></span>
+                        <canvas id="stryder22PurpleTigerCanvas"></canvas>
+                    </li>
                 </ul>
                 <div>
                     <label for="stryder22CompletedKills">Enter completed Critical Kills for Stryder .22:</label>
@@ -3690,13 +3906,21 @@
                 </div>
                 <h3>Special Camos:</h3>
                 <ul>
-                    <li><strong>Wavy</strong>: 300 point blank kills<span id="stryder22Special1Progress"></span></li>
+                    <li>
+                        <strong>Wavy</strong>: 300 point blank kills
+                        <span id="stryder22Special1Progress"></span>
+                        <canvas id="stryder22Special1Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="stryder22Special1Kills">Enter completed kills for Special 1:</label>
                         <input type="number" id="stryder22Special1Kills" min="0" placeholder="Enter kills">
                         <button id="savestryder22Special1ProgressButton">Save Special 1 Progress</button>
                     </div>
-                    <li><strong>Condemn</strong>: 30 Vermin kills<span id="stryder22Special2Progress"></span></li>
+                    <li>
+                        <strong>Condemn</strong>: 30 Vermin kills
+                        <span id="stryder22Special2Progress"></span>
+                        <canvas id="stryder22Special2Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="stryder22Special2Kills">Enter completed kills for Special 2:</label>
                         <input type="number" id="stryder22Special2Kills" min="0" placeholder="Enter kills">
@@ -3705,25 +3929,41 @@
                 </ul>
                 <h3>Mastery Camos:</h3>
                 <ul>
-                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times<span id="stryder22Mastery1Progress"></span></li>
+                    <li>
+                        <strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times
+                        <span id="stryder22Mastery1Progress"></span>
+                        <canvas id="stryder22Mastery1Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="stryder22Mastery1Kills">Enter completed kills for Mastery 1:</label>
                         <input type="number" id="stryder22Mastery1Kills" min="0" placeholder="Enter kills">
                         <button id="savestryder22Mastery1ProgressButton">Save Mastery 1 Progress</button>
                     </div>
-                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations<span id="stryder22Mastery2Progress"></span></li>
+                    <li>
+                        <strong>Opal</strong>: Get 30 Special Zombie Eliminations
+                        <span id="stryder22Mastery2Progress"></span>
+                        <canvas id="stryder22Mastery2Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="stryder22Mastery2Kills">Enter completed kills for Mastery 2:</label>
                         <input type="number" id="stryder22Mastery2Kills" min="0" placeholder="Enter kills">
                         <button id="savestryder22Mastery2ProgressButton">Save Mastery 2 Progress</button>
                     </div>
-                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times<span id="stryder22Mastery3Progress"></span></li>
+                    <li>
+                        <strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times
+                        <span id="stryder22Mastery3Progress"></span>
+                        <canvas id="stryder22Mastery3Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="stryder22Mastery3Kills">Enter completed kills for Mastery 3:</label>
                         <input type="number" id="stryder22Mastery3Kills" min="0" placeholder="Enter kills">
                         <button id="savestryder22Mastery3ProgressButton">Save Mastery 3 Progress</button>
                     </div>
-                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills<span id="stryder22Mastery4Progress"></span></li>
+                    <li>
+                        <strong>Nebula</strong>: Get 10 Elite Zombie Kills
+                        <span id="stryder22Mastery4Progress"></span>
+                        <canvas id="stryder22Mastery4Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="stryder22Mastery4Kills">Enter completed kills for Mastery 4:</label>
                         <input type="number" id="stryder22Mastery4Kills" min="0" placeholder="Enter kills">
@@ -3882,15 +4122,51 @@
             <div class="camos">
                 <h3>Military Camos:</h3>
                 <ul>
-                    <li><strong>Slate</strong>: Get 100 Critical Kills <span id="sirin9mmSlateProgress"></span></li>
-                    <li><strong>Desert</strong>: Get 200 Critical Kills <span id="sirin9mmDesertProgress"></span></li>
-                    <li><strong>Evergreen</strong>: Get 300 Critical Kills <span id="sirin9mmEvergreenProgress"></span></li>
-                    <li><strong>Rugged</strong>: Get 400 Critical Kills <span id="sirin9mmRuggedProgress"></span></li>
-                    <li><strong>Grim</strong>: Get 600 Critical Kills <span id="sirin9mmGrimProgress"></span></li>
-                    <li><strong>Stripe</strong>: Get 800 Critical Kills <span id="sirin9mmStripeProgress"></span></li>
-                    <li><strong>Oceanic</strong>: Get 1,000 Critical Kills <span id="sirin9mmOceanicProgress"></span></li>
-                    <li><strong>Whiteout</strong>: Get 1,500 Critical Kills <span id="sirin9mmWhiteoutProgress"></span></li>
-                    <li><strong>Purple Tiger</strong>: Get 2,000 Critical Kills <span id="sirin9mmPurpleTigerProgress"></span></li>
+                    <li>
+                        <strong>Slate</strong>: Get 100 Critical Kills 
+                        <span id="sirin9mmSlateProgress"></span>
+                        <canvas id="sirin9mmSlateCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Desert</strong>: Get 200 Critical Kills 
+                        <span id="sirin9mmDesertProgress"></span>
+                        <canvas id="sirin9mmDesertCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Evergreen</strong>: Get 300 Critical Kills 
+                        <span id="sirin9mmEvergreenProgress"></span>
+                        <canvas id="sirin9mmEvergreenCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Rugged</strong>: Get 400 Critical Kills 
+                        <span id="sirin9mmRuggedProgress"></span>
+                        <canvas id="sirin9mmRuggedCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Grim</strong>: Get 600 Critical Kills 
+                        <span id="sirin9mmGrimProgress"></span>
+                        <canvas id="sirin9mmGrimCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Stripe</strong>: Get 800 Critical Kills 
+                        <span id="sirin9mmStripeProgress"></span>
+                        <canvas id="sirin9mmStripeCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Oceanic</strong>: Get 1,000 Critical Kills 
+                        <span id="sirin9mmOceanicProgress"></span>
+                        <canvas id="sirin9mmOceanicCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Whiteout</strong>: Get 1,500 Critical Kills 
+                        <span id="sirin9mmWhiteoutProgress"></span>
+                        <canvas id="sirin9mmWhiteoutCanvas"></canvas>
+                    </li>
+                    <li>
+                        <strong>Purple Tiger</strong>: Get 2,000 Critical Kills 
+                        <span id="sirin9mmPurpleTigerProgress"></span>
+                        <canvas id="sirin9mmPurpleTigerCanvas"></canvas>
+                    </li>
                 </ul>
                 <div>
                     <label for="sirin9mmCompletedKills">Enter completed Critical Kills for Sirin 9mm:</label>
@@ -3899,13 +4175,21 @@
                 </div>
                 <h3>Special Camos:</h3>
                 <ul>
-                    <li><strong>Starsynbc</strong>: 300 hipfire kills<span id="sirin9mmSpecial1Progress"></span></li>
+                    <li>
+                        <strong>Starsynbc</strong>: 300 hipfire kills
+                        <span id="sirin9mmSpecial1Progress"></span>
+                        <canvas id="sirin9mmSpecial1Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="sirin9mmSpecial1Kills">Enter completed kills for Special 1:</label>
                         <input type="number" id="sirin9mmSpecial1Kills" min="0" placeholder="Enter kills">
                         <button id="savesirin9mmSpecial1ProgressButton">Save Special 1 Progress</button>
                     </div>
-                    <li><strong>Tempt Fate</strong>: 30 Parasite kills<span id="sirin9mmSpecial2Progress"></span></li>
+                    <li>
+                        <strong>Tempt Fate</strong>: 30 Parasite kills
+                        <span id="sirin9mmSpecial2Progress"></span>
+                        <canvas id="sirin9mmSpecial2Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="sirin9mmSpecial2Kills">Enter completed kills for Special 2:</label>
                         <input type="number" id="sirin9mmSpecial2Kills" min="0" placeholder="Enter kills">
@@ -3914,25 +4198,41 @@
                 </ul>
                 <h3>Mastery Camos:</h3>
                 <ul>
-                    <li><strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times<span id="sirin9mmMastery1Progress"></span></li>
+                    <li>
+                        <strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times
+                        <span id="sirin9mmMastery1Progress"></span>
+                        <canvas id="sirin9mmMastery1Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="sirin9mmMastery1Kills">Enter completed kills for Mastery 1:</label>
                         <input type="number" id="sirin9mmMastery1Kills" min="0" placeholder="Enter kills">
                         <button id="savesirin9mmMastery1ProgressButton">Save Mastery 1 Progress</button>
                     </div>
-                    <li><strong>Opal</strong>: Get 30 Special Zombie Eliminations<span id="sirin9mmMastery2Progress"></span></li>
+                    <li>
+                        <strong>Opal</strong>: Get 30 Special Zombie Eliminations
+                        <span id="sirin9mmMastery2Progress"></span>
+                        <canvas id="sirin9mmMastery2Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="sirin9mmMastery2Kills">Enter completed kills for Mastery 2:</label>
                         <input type="number" id="sirin9mmMastery2Kills" min="0" placeholder="Enter kills">
                         <button id="savesirin9mmMastery2ProgressButton">Save Mastery 2 Progress</button>
                     </div>
-                    <li><strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times<span id="sirin9mmMastery3Progress"></span></li>
+                    <li>
+                        <strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times
+                        <span id="sirin9mmMastery3Progress"></span>
+                        <canvas id="sirin9mmMastery3Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="sirin9mmMastery3Kills">Enter completed kills for Mastery 3:</label>
                         <input type="number" id="sirin9mmMastery3Kills" min="0" placeholder="Enter kills">
                         <button id="savesirin9mmMastery3ProgressButton">Save Mastery 3 Progress</button>
                     </div>
-                    <li><strong>Nebula</strong>: Get 10 Elite Zombie Kills<span id="sirin9mmMastery4Progress"></span></li>
+                    <li>
+                        <strong>Nebula</strong>: Get 10 Elite Zombie Kills
+                        <span id="sirin9mmMastery4Progress"></span>
+                        <canvas id="sirin9mmMastery4Canvas"></canvas>
+                    </li>
                     <div>
                         <label for="sirin9mmMastery4Kills">Enter completed kills for Mastery 4:</label>
                         <input type="number" id="sirin9mmMastery4Kills" min="0" placeholder="Enter kills">
