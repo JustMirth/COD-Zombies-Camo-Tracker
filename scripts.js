@@ -255,33 +255,30 @@ function saveMasteryCamoProgress(weapon, camoNum) {
 //Load stored progress from localStorage for Military
 function loadWeaponProgress(weapon) {
     const savedKills = localStorage.getItem(`${weapon}CompletedKills`);
-    if (savedKills) {
-        const completedKillsInput = document.getElementById(`${weapon}CompletedKills`);
-        completedKillsInput.value = savedKills;
-        updateWeaponCamoProgress(weapon, parseInt(savedKills));
-    }
+    const completedKills = savedKills ? parseInt(savedKills) : 0;
+    const completedKillsInput = document.getElementById(`${weapon}CompletedKills`);
+    completedKillsInput.value = completedKills;
+    updateWeaponCamoProgress(weapon, completedKills);
 }
 
 //Load stored Progress from localStorage for Specials
 function loadSpecialCamoProgress(weapon, specialCamoNum) {
     const specialCamo = specialCamoRequirements[weapon][specialCamoNum-1];
     const savedKills = localStorage.getItem(`${weapon}${specialCamo.specialKey}`);
-    if (savedKills) {
-        const completedKillsInput = document.getElementById(`${weapon}Special${specialCamoNum}Kills`);
-        completedKillsInput.value = savedKills;
-        updateSpecialCamoProgress(weapon, specialCamoNum, parseInt(savedKills));
-    }
+    const completedKills = savedKills ? parseInt(savedKills) : 0; 
+    const completedKillsInput = document.getElementById(`${weapon}Special${specialCamoNum}Kills`);
+    completedKillsInput.value = savedKills;
+    updateSpecialCamoProgress(weapon, specialCamoNum, completedKills);
 }
 
 //Load Stored Progress from localStorage for Mastery
 function loadMasteryCamoProgress(weapon, camoNum) {
     const key = `${weapon}Mastery${camoNum}Kills`;
     const savedKills = localStorage.getItem(key);
-    if (savedKills) {
-        const completedKillsInput = document.getElementById(`${weapon}Mastery${camoNum}Kills`);
-        completedKillsInput.value = savedKills;
-        updateMasteryCamoProgress(weapon, camoNum, parseInt(savedKills));
-    }
+    const completedKills = savedKills ? parseInt(savedKills) : 0; 
+    const completedKillsInput = document.getElementById(`${weapon}Mastery${camoNum}Kills`);
+    completedKillsInput.value = savedKills;
+    updateMasteryCamoProgress(weapon, camoNum, completedKills);
 }
 
 //Weapons
