@@ -287,7 +287,7 @@ const weapons = [
     'swat556', 'tsarkov762', 'aek973', 'dm10',
     'lw3a1frostline', 'svd', 'lr762',
     'mmpm', 'grekhova', 'gs45', 'stryder22',
-    'cigma28', 'he1', 
+    'cigma2b', 'he1', 
     'sirin9mm', 
     'knife', 'baseballbat', 'powerdrill'
 ];
@@ -298,12 +298,12 @@ function attachButtonListeners() {
         // Military camo buttons
         document.getElementById(`save${weapon}ProgressButton`).addEventListener('click', () => saveWeaponProgress(weapon));
       
-        // Special camo buttons (1 and 2)
+        // Special camo buttons
         for (let i = 1; i <= 2; i++) {
             document.getElementById(`save${weapon}Special${i}ProgressButton`).addEventListener('click', () => saveSpecialCamoProgress(weapon, i));
         }
       
-        // Mastery camo buttons (1 to 4)
+        // Mastery camo buttons
         for (let i = 1; i <= 4; i++) {
             document.getElementById(`save${weapon}Mastery${i}ProgressButton`).addEventListener('click', () => saveMasteryCamoProgress(weapon, i));
         }
