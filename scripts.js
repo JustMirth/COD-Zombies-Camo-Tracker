@@ -402,6 +402,8 @@ function checkAndRevealCamos(weapon) {
     const militaryCamosCompleted = checkMilitaryCamoCompletion(weapon);
     const specialCamosCompleted = checkSpecialCamosCompletion(weapon);
     const mastery1Completed = checkMastery1Completion(weapon);
+    const mastery2Completed = checkMastery2Completion();
+    const mastery3Completed = checkMastery3Completion();
 
     // Reveal Special Camos if Military Camo is completed
     if (militaryCamosCompleted) {
@@ -429,6 +431,24 @@ function checkAndRevealCamos(weapon) {
         const mastery2CamoDiv = document.getElementById(`${weapon}Mastery2Camo`);
         mastery2CamoDiv.style.display = "none";
     }
+
+    //Reveal Mastery 3 if enough of Mastery 2 is done
+    if (mastery2Completed) {
+        const mastery3CamoDiv = document.getElementById(`${weapon}Mastery3Camo`);
+        mastery3CamoDiv.style.display = "block";
+    } else {
+        const mastery3CamoDiv = document.getElementById(`${weapon}Mastery3Camo`);
+        mastery3CamoDiv.style.display = "none";
+    }
+
+    //Reveal Mastery 4 if enough of Mastery 3 is done
+    if (mastery3Completed) {
+        const mastery4CamoDiv = document.getElementById(`${weapon}Mastery4Camo`);
+        mastery4CamoDiv.style.display = "block";
+    } else {
+        const mastery4CamoDiv = document.getElementById(`${weapon}Mastery4Camo`);
+        mastery4CamoDiv.style.display = "none";
+    }
 }
 
 //Check if Militaries are done
@@ -454,17 +474,6 @@ function checkSpecialCamosCompletion(weapon) {
     return true;
 }
 
-
-//Check to see if Weapon has Mastery 1 Done
-function isMastery1Completed(weapon) {
-    const mastery1Kills = localStorage.getItem(`${weapon}Mastery1Kills`);
-    const requiredMastery1Kills = 10;
-    if (mastery1Kills >= requiredMastery1Kills) {
-        return true;
-    }
-    return false;
-}
-
 //Check if Enough Mastery 1 are Done
 function checkMastery1Completion(weapon) {
     let archetype = null;
@@ -474,7 +483,6 @@ function checkMastery1Completion(weapon) {
             break;
         }
     }
-
     const threshold = mastery1Threshold[archetype];
     let completedCount = 0;
     for (const weaponInArchetype of weaponArchetypes[archetype]) {
@@ -482,8 +490,61 @@ function checkMastery1Completion(weapon) {
             completedCount++;
         }
     }
-
     return completedCount >= threshold;
+}
+
+//Check if Enough Mastery 2 are Done
+function checkMastery2Completion() {
+    const threshold = 33;
+    let completedCount = 0;
+    for (const weapon of weapons) {
+        if (isMastery2Completed(weapon)) {
+            completedCount++;
+        }
+    }
+    return completedCount >= threshold;
+}
+
+//Check if Enough Mastery 3 are Done
+function checkMastery3Completion() {
+    const threshold = 33
+    let completedCount = 0;
+    for (const weapon of weapons) {
+        if (isMastery2Completed(weapon)) {
+            completedCount++;
+        }
+    }
+    return completedCount >= threshold;
+}
+
+//Check to see if Weapon has Mastery 1 Done
+function isMastery1Completed(weapon) {
+    const mastery1Kills = localStorage.getItem(`${weapon}Mastery1Kills`);
+    const requiredMastery1Kills = 15;
+    if (mastery1Kills >= requiredMastery1Kills) {
+        return true;
+    }
+    return false;
+}
+
+//Check to see if Weapon has Mastery 2 Done
+function isMastery2Completed(weapon) {
+    const mastery2Kills = localStorage.getItem(`${weapon}Mastery2Kills`);
+    const requiredMastery2Kills = 30;
+    if (mastery2Kills >= requiredMastery2Kills) {
+        return true;
+    }
+    return false;
+}
+
+//Check to see if Weapon has Mastery 3 Done
+function isMastery3Completed(weapon) {
+    const mastery3Kills = localStorage.getItem(`${weapon}Mastery3Kills`);
+    const requiredMastery3Kills = 10;
+    if (mastery3Kills >= requiredMastery3Kills) {
+        return true;
+    }
+    return false;
 }
 
 //On Page Load

@@ -28,7 +28,7 @@
     <button id="clearLocalStorage">Clear Local Storage</button>
 </header>
 
-<section id="assault_Rifles">
+<section id="ars">
     <h2>Assault Rifles</h2>
     <button class="expandWeaponButton">Show Weapons</button>
     <div class="weapon_Archetype" id="ARs">
@@ -91,7 +91,7 @@
                     <button id="savexm4ProgressButton">Save XM4 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <p>Military Camos must be done to see Special Camos.</p>
+                <mark>All Military Camos must be done in order to see Special Camos.</mark>
                 <ul id="xm4SpecialCamos" style="display:none;">
                     <li>
                         <strong>Liquify</strong>: 300 kills with Napalm Burst Equipped 
@@ -116,8 +116,9 @@
                 </ul>
                 <h3>Mastery Camos:</h3>
                 <ul>
-                    <p>Both special must be done to see Gold</p>
+                    <mark>Both Special Camos must be done in order to see Mystic Gold</mark>
                     <div id="xm4Mastery1Camo" display="none">
+                        <br><br>
                         <li>
                             <strong>Mystic Gold</strong>: Get 10 kills rapidly 15 times
                             <span id="xm4Mastery1Progress"></span>
@@ -129,8 +130,10 @@
                             <button id="savexm4Mastery1ProgressButton">Save Mastery 1 Progress</button>
                         </div>
                     </div>
-                    <p>7 ARs must have Gold to see Opal</p>
+                    <br><br>
+                    <mark>7 ARs must have Mystic Gold in order to see Opal</mark>
                     <div id="xm4Mastery2Camo" display="none">
+                        <br><br>
                         <li>
                             <strong>Opal</strong>: Get 30 Special Zombie Eliminations
                             <span id="xm4Mastery2Progress"></span>
@@ -141,25 +144,36 @@
                             <input type="number" id="xm4Mastery2Kills" min="0" placeholder="Enter kills">
                             <button id="savexm4Mastery2ProgressButton">Save Mastery 2 Progress</button>
                         </div>
-                    <li>
-                        <strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times
-                        <span id="xm4Mastery3Progress"></span>
-                        <canvas id="xm4Mastery3Canvas"></canvas>
-                    </li>
-                    <div>
-                        <label for="xm4Mastery3Kills">Enter completed kills for Mastery 3:</label>
-                        <input type="number" id="xm4Mastery3Kills" min="0" placeholder="Enter kills">
-                        <button id="savexm4Mastery3ProgressButton">Save Mastery 3 Progress</button>
                     </div>
-                    <li>
-                        <strong>Nebula</strong>: Get 10 Elite Zombie Kills
-                        <span id="xm4Mastery4Progress"></span>
-                        <canvas id="xm4Mastery4Canvas"></canvas>
-                    </li>
-                    <div>
-                        <label for="xm4Mastery4Kills">Enter completed kills for Mastery 4:</label>
-                        <input type="number" id="xm4Mastery4Kills" min="0" placeholder="Enter kills">
-                        <button id="savexm4Mastery4ProgressButton">Save Mastery 4 Progress</button>
+                    <br><br>
+                    <mark>33 Weapons must have Opal in order to see Afterlife</mark>
+                    <div id="xm4Mastery3Camo" display="none">
+                        <br><br>
+                        <li>
+                            <strong>Afterlife</strong>: Get 20 or more consecutive kills without taking damage 10 times
+                            <span id="xm4Mastery3Progress"></span>
+                            <canvas id="xm4Mastery3Canvas"></canvas>
+                        </li>
+                        <div>
+                            <label for="xm4Mastery3Kills">Enter completed kills for Mastery 3:</label>
+                            <input type="number" id="xm4Mastery3Kills" min="0" placeholder="Enter kills">
+                            <button id="savexm4Mastery3ProgressButton">Save Mastery 3 Progress</button>
+                        </div>
+                    </div>
+                    <br><br>
+                    <mark>33 Weapons must have Afterlife in order to see Nebula</mark>
+                    <div id="xm4Mastery4Camo" display="none">
+                        <br><br>
+                        <li>
+                            <strong>Nebula</strong>: Get 10 Elite Zombie Kills
+                            <span id="xm4Mastery4Progress"></span>
+                            <canvas id="xm4Mastery4Canvas"></canvas>
+                        </li>
+                        <div>
+                            <label for="xm4Mastery4Kills">Enter completed kills for Mastery 4:</label>
+                            <input type="number" id="xm4Mastery4Kills" min="0" placeholder="Enter kills">
+                            <button id="savexm4Mastery4ProgressButton">Save Mastery 4 Progress</button>
+                        </div>
                     </div>
                 </ul>
             </div>
@@ -1055,7 +1069,7 @@
     </div>
 </section>
 
-<section id="submachine_Guns">
+<section id="smgs">
     <h2>Submachine Guns</h2>
     <button class="expandWeaponButton">Show Weapons</button>
     <div class="weapon_Archetype" id="SMGs">
@@ -1952,7 +1966,7 @@
     </div>
 </section>
 
-<section id="shotguns">
+<section id="sgs">
     <h2>Shotguns</h2>
     <button class="expandWeaponButton">Show Weapons</button>
     <div class="weapon_Archetype" id="SGs">
@@ -2214,7 +2228,7 @@
     </div>
 </section>
 
-<section id="light_Machine_Guns">
+<section id="lmgs">
     <h2>Light Machine Guns</h2>
     <button class="expandWeaponButton">Show Weapons</button>
     <div class="weapon_Archetype" id="LMGs">
@@ -2602,7 +2616,7 @@
     </div>
 </section>
 
-<section id="marksman_Rifles">
+<section id="mrs">
     <h2>Markman Rifles</h2>
     <button class="expandWeaponButton">Show Weapons</button>
     <div class="weapon_Archetype" id="MRs">
@@ -3117,7 +3131,7 @@
     </div>
 </section>
 
-<section id="sniper_Rifles">
+<section id="srs">
     <h2>Sniper Rifles</h2>
     <button class="expandWeaponButton">Show Weapons</button>
     <div class="weapon_Archetype" id="SRs">
@@ -3505,7 +3519,7 @@
     </div>
 </section>
 
-<section id="pistols">
+<section id="pstls">
     <h2>Pistols</h2>
     <button class="expandWeaponButton">Show Weapons</button>
     <div class="weapon_Archetype" id="PSTLs">
@@ -4020,7 +4034,7 @@
     </div>
 </section>
 
-<section id="launchers">
+<section id="lnchrs">
     <h2>Launchers</h2>
     <button class="expandWeaponButton">Show Weapons</button>
     <div class="weapon_Archetype" id="LNCHRs">
@@ -4280,7 +4294,7 @@
     </div>
 </section>
 
-<section id="specials">
+<section id="spcls">
     <h2>Specials</h2>
     <button class="expandWeaponButton">Show Weapons</button>
     <div class="weapon_Archetype" id="SPCLS">
@@ -4414,7 +4428,7 @@
     </div>
 </section>
 
-<section id="melee_weapons">
+<section id="mws">
     <h2>Melee Weapons</h2>
     <button class="expandWeaponButton">Show Weapons</button>
     <div class="weapon_Archetype" id="MWs">
