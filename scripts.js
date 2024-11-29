@@ -1,3 +1,10 @@
+//Function to Clear Local Storage
+document.getElementById('clearLocalStorage').onclick = clearStorage;
+function clearStorage() {
+    localStorage.clear();
+    location.reload();
+}
+
 //Function to Show hidden weapons
 const expandWeaponButtons = document.querySelectorAll('.expandWeaponButton');
 expandWeaponButtons.forEach(button => {
@@ -39,6 +46,7 @@ function updateWeaponCamoProgress(weapon, completedKills) {
             progressElement.textContent = ` - Progress: ${completedKills} / ${camo.requiredKills}`;
         }
         createProgressChart(canvas, completedKills, camo.requiredKills);
+        checkAndRevealCamos(weapon); 
     });
 }
 
@@ -206,6 +214,7 @@ function updateSpecialCamoProgress(weapon, specialCamoNum, completedKills) {
         progressElement.textContent = ` - Progress: ${completedKills} / ${specialCamo.requiredKills}`;
     }
     createProgressChart(canvas, completedKills, specialCamo.requiredKills);
+    checkAndRevealCamos(weapon); 
 }
 
 // Function to Update Camo Progress for Mastery Camos
@@ -227,6 +236,7 @@ function updateMasteryCamoProgress(weapon, camoNum, completedKills) {
         progressElement.textContent = ` - Progress: ${completedKills} / ${camo.requiredKills}`;
     }
     createProgressChart(canvas, completedKills, camo.requiredKills);
+    checkAndRevealCamos(weapon); 
 }
 
 //Save progress for Military
@@ -304,17 +314,46 @@ const weapons = [
     'knife', 'baseballbat', 'powerdrill'
 ];
 
+//Weapon Archetypes
+const weaponArchetypes = {
+    ars: ['xm4', 'ak74', 'ames85', 'gpr91', 'modell', 'goblinmk2', 'asval', 'krigc',],
+    smgs: ['c9', 'ksv', 'tanto22', 'pp919', 'jackalpdw', 'kompakt92', 'saug',],
+    sgs: ['marinesp', 'asg89',],
+    lmgs: ['pu21', 'xmg', 'gpmg7',],
+    mrs: ['swat556', 'tsarkov762', 'aek973', 'dm10',],
+    srs: ['lw3a1frostline', 'svd', 'lr762',],
+    pstls: ['mmpm', 'grekhova', 'gs45', 'stryder22',],
+    lnchrs: ['cigma2b', 'he1',],
+    spcls: ['sirin9mm',],
+    mws: ['knife', 'baseballbat', 'powerdrill',]
+};
+
+//Gold Thresholds
+const mastery1Threshold = {
+    ars: 7,
+    smgs: 6,
+    sgs: 2,
+    lmgs: 3,
+    mrs: 4,
+    srs: 3,
+    pstls: 4,
+    lnchrs: 2,
+    spcls: 1,
+    mws: 2
+}
+
+//Buttons
 function attachButtonListeners() {
     weapons.forEach(weapon => {
-        // Military camo buttons
+        //Military camo buttons
         document.getElementById(`save${weapon}ProgressButton`).addEventListener('click', () => saveWeaponProgress(weapon));
       
-        // Special camo buttons (1 and 2)
+        //Special camo buttons (1 and 2)
         for (let i = 1; i <= 2; i++) {
             document.getElementById(`save${weapon}Special${i}ProgressButton`).addEventListener('click', () => saveSpecialCamoProgress(weapon, i));
         }
       
-        // Mastery camo buttons (1 to 4)
+        //Mastery camo buttons (1 to 4)
         for (let i = 1; i <= 4; i++) {
             document.getElementById(`save${weapon}Mastery${i}ProgressButton`).addEventListener('click', () => saveMasteryCamoProgress(weapon, i));
         }
@@ -357,6 +396,156 @@ function createProgressChart(canvas, completedKills, requiredKills) {
             }
         }
     });
+}
+
+// Reveal Blocked Camos
+function checkAndRevealCamos(weapon) {
+    const militaryCamosCompleted = checkMilitaryCamoCompletion(weapon);
+    const specialCamosCompleted = checkSpecialCamosCompletion(weapon);
+    const mastery1Completed = checkMastery1Completion(weapon);
+    const mastery2Completed = checkMastery2Completion();
+    const mastery3Completed = checkMastery3Completion();
+
+    // Reveal Special Camos if Military Camo is completed
+    if (militaryCamosCompleted) {
+        const specialCamoDiv = document.getElementById(`${weapon}SpecialCamos`);
+        specialCamoDiv.style.display = "block";
+    } else {
+        const specialCamoDiv = document.getElementById(`${weapon}SpecialCamos`);
+        specialCamoDiv.style.display = "none";
+    }
+
+    // Reveal Mastery Camo 1 if both Special Camos are completed
+    if (specialCamosCompleted) {
+        const mastery1CamoDiv = document.getElementById(`${weapon}Mastery1Camo`);
+        mastery1CamoDiv.style.display = "block";
+    } else {
+        const mastery1CamoDiv = document.getElementById(`${weapon}Mastery1Camo`);
+        mastery1CamoDiv.style.display = "none";
+    }
+
+    //Reveal Mastery 2 if enough of Mastery 1 is done
+    if (mastery1Completed) {
+        const mastery2CamoDiv = document.getElementById(`${weapon}Mastery2Camo`);
+        mastery2CamoDiv.style.display = "block";
+    } else {
+        const mastery2CamoDiv = document.getElementById(`${weapon}Mastery2Camo`);
+        mastery2CamoDiv.style.display = "none";
+    }
+
+    //Reveal Mastery 3 if enough of Mastery 2 is done
+    if (mastery2Completed) {
+        const mastery3CamoDiv = document.getElementById(`${weapon}Mastery3Camo`);
+        mastery3CamoDiv.style.display = "block";
+    } else {
+        const mastery3CamoDiv = document.getElementById(`${weapon}Mastery3Camo`);
+        mastery3CamoDiv.style.display = "none";
+    }
+
+    //Reveal Mastery 4 if enough of Mastery 3 is done
+    if (mastery3Completed) {
+        const mastery4CamoDiv = document.getElementById(`${weapon}Mastery4Camo`);
+        mastery4CamoDiv.style.display = "block";
+    } else {
+        const mastery4CamoDiv = document.getElementById(`${weapon}Mastery4Camo`);
+        mastery4CamoDiv.style.display = "none";
+    }
+}
+
+//Check if Militaries are done
+function checkMilitaryCamoCompletion(weapon) {
+    const lastMilitaryCamoKills = localStorage.getItem(`${weapon}CompletedKills`);
+    const lastRequiredKills = 2000;
+    if (lastMilitaryCamoKills >= lastRequiredKills) {
+        return true;
+    }
+    return false;
+}
+
+//Check if Specials are Done 
+function checkSpecialCamosCompletion(weapon) {
+    const weaponSpecials = specialCamoRequirements[weapon];
+    for (let i = 0; i < weaponSpecials.length; i++) {
+        const special = weaponSpecials[i];
+        const currentKills = localStorage.getItem(`${weapon}${special.specialKey}`) || 0;
+        if (currentKills < special.requiredKills) {
+            return false;
+        }
+    }
+    return true;
+}
+
+//Check if Enough Mastery 1 are Done
+function checkMastery1Completion(weapon) {
+    let archetype = null;
+    for (const [key, weaponsList] of Object.entries(weaponArchetypes)) {
+        if (weaponsList.includes(weapon)) {
+            archetype = key;
+            break;
+        }
+    }
+    const threshold = mastery1Threshold[archetype];
+    let completedCount = 0;
+    for (const weaponInArchetype of weaponArchetypes[archetype]) {
+        if (isMastery1Completed(weaponInArchetype)) {
+            completedCount++;
+        }
+    }
+    return completedCount >= threshold;
+}
+
+//Check if Enough Mastery 2 are Done
+function checkMastery2Completion() {
+    const threshold = 33;
+    let completedCount = 0;
+    for (const weapon of weapons) {
+        if (isMastery2Completed(weapon)) {
+            completedCount++;
+        }
+    }
+    return completedCount >= threshold;
+}
+
+//Check if Enough Mastery 3 are Done
+function checkMastery3Completion() {
+    const threshold = 33
+    let completedCount = 0;
+    for (const weapon of weapons) {
+        if (isMastery2Completed(weapon)) {
+            completedCount++;
+        }
+    }
+    return completedCount >= threshold;
+}
+
+//Check to see if Weapon has Mastery 1 Done
+function isMastery1Completed(weapon) {
+    const mastery1Kills = localStorage.getItem(`${weapon}Mastery1Kills`);
+    const requiredMastery1Kills = 15;
+    if (mastery1Kills < requiredMastery1Kills) {
+        return false;
+    }
+    return true;
+}
+
+//Check to see if Weapon has Mastery 2 Done
+function isMastery2Completed(weapon) {
+    const mastery2Kills = localStorage.getItem(`${weapon}Mastery2Kills`);
+    const requiredMastery2Kills = 30;
+    if (mastery2Kills < requiredMastery2Kills) {
+        return false;
+    }
+    return true;
+}
+
+//Check to see if Weapon has Mastery 3 Done
+function isMastery3Completed(weapon) {
+    const mastery3Kills = localStorage.getItem(`${weapon}Mastery3Kills`);
+    const requiredMastery3Kills = 10;
+    if (mastery3Kills < requiredMastery3Kills) {
+        return false;
+    }
+    return true;
 }
 
 //On Page Load
