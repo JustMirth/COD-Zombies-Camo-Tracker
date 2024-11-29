@@ -236,6 +236,7 @@ function updateMasteryCamoProgress(weapon, camoNum, completedKills) {
         progressElement.textContent = ` - Progress: ${completedKills} / ${camo.requiredKills}`;
     }
     createProgressChart(canvas, completedKills, camo.requiredKills);
+    checkAndRevealCamos(weapon); 
 }
 
 //Save progress for Military
@@ -521,30 +522,30 @@ function checkMastery3Completion() {
 function isMastery1Completed(weapon) {
     const mastery1Kills = localStorage.getItem(`${weapon}Mastery1Kills`);
     const requiredMastery1Kills = 15;
-    if (mastery1Kills >= requiredMastery1Kills) {
-        return true;
+    if (mastery1Kills < requiredMastery1Kills) {
+        return false;
     }
-    return false;
+    return true;
 }
 
 //Check to see if Weapon has Mastery 2 Done
 function isMastery2Completed(weapon) {
     const mastery2Kills = localStorage.getItem(`${weapon}Mastery2Kills`);
     const requiredMastery2Kills = 30;
-    if (mastery2Kills >= requiredMastery2Kills) {
-        return true;
+    if (mastery2Kills < requiredMastery2Kills) {
+        return false;
     }
-    return false;
+    return true;
 }
 
 //Check to see if Weapon has Mastery 3 Done
 function isMastery3Completed(weapon) {
     const mastery3Kills = localStorage.getItem(`${weapon}Mastery3Kills`);
     const requiredMastery3Kills = 10;
-    if (mastery3Kills >= requiredMastery3Kills) {
-        return true;
+    if (mastery3Kills < requiredMastery3Kills) {
+        return false;
     }
-    return false;
+    return true;
 }
 
 //On Page Load
