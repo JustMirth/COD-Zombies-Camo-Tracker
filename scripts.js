@@ -1,6 +1,15 @@
+//Function to Show hidden weapons
+const expandWeaponButtons = document.querySelectorAll('.expandWeaponButton');
+expandWeaponButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const weaponDiv = button.nextElementSibling;
+        weaponDiv.classList.toggle('show');
+    });
+});
+
 //Function to Show hidden Camos
-const expandButtons = document.querySelectorAll('.expandButton');
-expandButtons.forEach(button => {
+const expandCamoButtons = document.querySelectorAll('.expandCamoButton');
+expandCamoButtons.forEach(button => {
     button.addEventListener('click', () => {
         const camosDiv = button.nextElementSibling;
         camosDiv.classList.toggle('show');
