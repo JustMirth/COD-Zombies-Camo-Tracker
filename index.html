@@ -25,6 +25,7 @@
             <li><a href="#melee_weapons">Melee Weapons</a></li>
         </ul>
     </nav>
+    <button id="clearLocalStorage">Clear Local Storage</button>
 </header>
 
 <section id="assault_Rifles">
@@ -37,7 +38,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="xm4MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="xm4SlateProgress"></span>
@@ -90,7 +91,8 @@
                     <button id="savexm4ProgressButton">Save XM4 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="xm4SpecialCamos" style="display:none;">
                     <li>
                         <strong>Liquify</strong>: 300 kills with Napalm Burst Equipped 
                         <span id="xm4Special1Progress"></span>
@@ -163,7 +165,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="ak74MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="ak74SlateProgress"></span>
@@ -216,7 +218,8 @@
                     <button id="saveak74ProgressButton">Save AK-74 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="ak74SpecialCamos" style="display:none;">
                     <li>
                         <strong>Chlorine</strong>: 5 critical kills rapidly 15 times
                         <span id="ak74Special1Progress"></span>
@@ -287,7 +290,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="ames85MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="ames85SlateProgress"></span>
@@ -340,7 +343,8 @@
                     <button id="saveames85ProgressButton">Save AMES 85 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="ames85SpecialCamos" style="display:none;">
                     <li>
                         <strong>Hyperion</strong>: 300 kills at Rare rarity or higher
                         <span id="ames85Special1Progress"></span>
@@ -413,7 +417,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="gpr91MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="gpr91SlateProgress"></span>
@@ -466,7 +470,8 @@
                     <button id="savegpr91ProgressButton">Save GPR 91 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="gpr91SpecialCamos" style="display:none;">
                     <li>
                         <strong>Night Stalker</strong>: 300 kills with Cryo Freeze equipped
                         <span id="gpr91Special1Progress"></span>
@@ -539,7 +544,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="modellMilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="modellSlateProgress"></span>
@@ -592,7 +597,8 @@
                     <button id="savemodellProgressButton">Save Model L Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="modellSpecialCamos" style="display:none;">
                     <li>
                         <strong>Ghost Blossom</strong>: 75 Armored Zombie kills
                         <span id="modellSpecial1Progress"></span>
@@ -665,7 +671,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="goblinmk2MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="goblinmk2SlateProgress"></span>
@@ -718,7 +724,8 @@
                     <button id="savegoblinmk2ProgressButton">Save Goblin Mk2 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="goblinmk2SpecialCamos" style="display:none;">
                     <li>
                         <strong>Astral Pride</strong>: 10 Mangler kills
                         <span id="goblinmk2Special1Progress"></span>
@@ -791,7 +798,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="asvalMilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="asvalSlateProgress"></span>
@@ -844,7 +851,8 @@
                     <button id="saveasvalProgressButton">Save AS Val Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="asvalSpecialCamos" style="display:none;">
                     <li>
                         <strong>Malachite</strong>: 30 Parasite kills
                         <span id="asvalSpecial1Progress"></span>
@@ -917,7 +925,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="krigcMilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="krigcSlateProgress"></span>
@@ -970,7 +978,8 @@
                     <button id="savekrigcProgressButton">Save Krig C Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="krigcSpecialCamos" style="display:none;">
                     <li>
                         <strong>Sunny Splash</strong>: 300 kills with Cryo Freeze equipped
                         <span id="krigcSpecial1Progress"></span>
@@ -1051,7 +1060,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="c9MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="c9SlateProgress"></span>
@@ -1104,7 +1113,8 @@
                     <button id="savec9ProgressButton">Save C9 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="c9SpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Infrared</strong>: 30 Parasite kills
                         <span id="c9Special1Progress"></span>
@@ -1177,7 +1187,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="ksvMilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="ksvSlateProgress"></span>
@@ -1230,7 +1240,8 @@
                     <button id="saveksvProgressButton">Save KSV Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="ksvSpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Phoenix</strong>: 300 kills with Dead Wire equipped
                         <span id="ksvSpecial1Progress"></span>
@@ -1304,7 +1315,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="tanto22MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="tanto22SlateProgress"></span>
@@ -1357,7 +1368,8 @@
                     <button id="savetanto22ProgressButton">Save Tanto. 22 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="tanto22SpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Solemn</strong>: 5 critical kills rapidly 15 times
                         <span id="tanto22Special1Progress"></span>
@@ -1430,7 +1442,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="pp919MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="pp919SlateProgress"></span>
@@ -1483,7 +1495,8 @@
                     <button id="savepp919ProgressButton">Save PP-919 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="pp919SpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Solvent</strong>: 300 kills with Cryo Freeze equipped
                         <span id="pp919Special1Progress"></span>
@@ -1556,7 +1569,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="jackalpdwMilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="jackalpdwSlateProgress"></span>
@@ -1609,7 +1622,8 @@
                     <button id="savejackalpdwProgressButton">Save Jackal PDW Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="jackalpdwSpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Plunge</strong>: 300 kills with Napalm Burst equipped
                         <span id="jackalpdwSpecial1Progress"></span>
@@ -1682,7 +1696,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="kompakt92MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="kompakt92SlateProgress"></span>
@@ -1735,7 +1749,8 @@
                     <button id="savekompakt92ProgressButton">Save Kompakt 92 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="kompakt92SpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Tequila Sunset</strong>: 300 kills at Rare rarity or higher
                         <span id="kompakt92Special1Progress"></span>
@@ -1808,7 +1823,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="saugMilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="saugSlateProgress"></span>
@@ -1861,7 +1876,8 @@
                     <button id="savesaugProgressButton">Save Saug Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="saugSpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Whisper</strong>: 300 kills with Dead Wire equipped
                         <span id="saugSpecial1Progress"></span>
@@ -1941,7 +1957,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="marinespMilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="marinespSlateProgress"></span>
@@ -1994,7 +2010,8 @@
                     <button id="savemarinespProgressButton">Save Marine SP Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="marinespSpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Strawberry Mint</strong>: 300 kills at Rare rarity or higher
                         <span id="marinespSpecial1Progress"></span>
@@ -2067,7 +2084,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="asg89MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="asg89SlateProgress"></span>
@@ -2120,7 +2137,8 @@
                     <button id="saveasg89ProgressButton">Save ASG-89 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="asg89SpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Dream Eater</strong>: 100 enemies killed while affected by your Tactical Equipment
                         <span id="asg89Special1Progress"></span>
@@ -2200,7 +2218,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="pu21MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="pu21SlateProgress"></span>
@@ -2253,7 +2271,8 @@
                     <button id="savepu21ProgressButton">Save PU-21 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="pu21SpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Vivid</strong>: 10 Mangler kills
                         <span id="pu21Special1Progress"></span>
@@ -2326,7 +2345,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="xmgMilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="xmgSlateProgress"></span>
@@ -2379,7 +2398,8 @@
                     <button id="savexmgProgressButton">Save XMG Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="xmgSpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Hiss</strong>: 10 kills without reloading 15 times
                         <span id="xmgSpecial1Progress"></span>
@@ -2452,7 +2472,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="gpmg7MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="gpmg7SlateProgress"></span>
@@ -2505,7 +2525,8 @@
                     <button id="savegpmg7ProgressButton">Save GPMG-7 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="gpmg7SpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Impressionist</strong>: 300 point blank kills
                         <span id="gpmg7Special1Progress"></span>
@@ -2585,7 +2606,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="swat556MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="swat556SlateProgress"></span>
@@ -2638,7 +2659,8 @@
                     <button id="saveswat556ProgressButton">Save SWAT 5.56 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="swat556SpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Hyperspace</strong>: 100 enemies killed while affected by your Tactical Equipment
                         <span id="swat556Special1Progress"></span>
@@ -2711,7 +2733,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="tsarkov762MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="tsarkov762SlateProgress"></span>
@@ -2764,7 +2786,8 @@
                     <button id="savetsarkov762ProgressButton">Save Tsarkov 7.62 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="tsarkov762SpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Harvest</strong>: 100 enemies killed while affected by your Tactical Equipment
                         <span id="tsarkov762Special1Progress"></span>
@@ -2837,7 +2860,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="aek973MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="aek973SlateProgress"></span>
@@ -2890,7 +2913,8 @@
                     <button id="saveaek973ProgressButton">Save AEK-973 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="aek973SpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Blood Moon</strong>: 300 kills with Napalm Burst equipped
                         <span id="aek973Special1Progress"></span>
@@ -2963,7 +2987,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="dm10MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="dm10SlateProgress"></span>
@@ -3016,7 +3040,8 @@
                     <button id="savedm10ProgressButton">Save DM-10 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="dm10SpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Furybloom</strong>: 5 critical kills rapidly 15 times
                         <span id="dm10Special1Progress"></span>
@@ -3096,7 +3121,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="lw3a1MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="lw3a1frostlineSlateProgress"></span>
@@ -3149,7 +3174,8 @@
                     <button id="savelw3a1frostlineProgressButton">Save LW3A1 Frostline Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="lw3a1frostlineSpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Strata</strong>: 300 kills at Rare rarity or higher
                         <span id="lw3a1frostlineSpecial1Progress"></span>
@@ -3222,7 +3248,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="svdMilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="svdSlateProgress"></span>
@@ -3275,7 +3301,8 @@
                     <button id="savesvdProgressButton">Save SVD Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="svdSpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Cartridge</strong>: 300 kills while Pack-a-Punched
                         <span id="svdSpecial1Progress"></span>
@@ -3348,7 +3375,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="lr762MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="lr762SlateProgress"></span>
@@ -3401,7 +3428,8 @@
                     <button id="savelr762ProgressButton">Save LR 7.62 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="lr762SpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Foxglove</strong>: 10 Mangler kills
                         <span id="lr762Special1Progress"></span>
@@ -3481,7 +3509,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="mmpmMilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="mmpmSlateProgress"></span>
@@ -3534,7 +3562,8 @@
                     <button id="savemmpmProgressButton">Save 9mm PM Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="mmpmSpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Yottabyte</strong>: 300 kills with Cryo Freeze equipped
                         <span id="mmpmSpecial1Progress"></span>
@@ -3607,7 +3636,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="grekhovaMilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="grekhovaSlateProgress"></span>
@@ -3660,7 +3689,8 @@
                     <button id="savegrekhovaProgressButton">Save Grekhova Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="grekhovaSpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Hi-Fi</strong>: 10 Mangler kills
                         <span id="grekhovaSpecial1Progress"></span>
@@ -3733,7 +3763,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="gs45MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="gs45SlateProgress"></span>
@@ -3786,7 +3816,8 @@
                     <button id="savegs45ProgressButton">Save GS45 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="gs45SpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Velvetine</strong>: 300 kills at Rare rarity or higher
                         <span id="gs45Special1Progress"></span>
@@ -3859,7 +3890,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="stryder22MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="stryder22SlateProgress"></span>
@@ -3912,7 +3943,8 @@
                     <button id="savestryder22ProgressButton">Save Stryder .22 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="stryder22SpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Wavy</strong>: 300 point blank kills
                         <span id="stryder22Special1Progress"></span>
@@ -3992,7 +4024,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="cigma2bMilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Kills 
                         <span id="cigma2bSlateProgress"></span>
@@ -4045,7 +4077,8 @@
                     <button id="savecigma2bProgressButton">Save CIGMA 2B Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="cigma2bSpecialCamos" style="display:none;">                    
                     <li>
                         <strong>CBRNE</strong>: 300 kills while Pack-a-Punched
                         <span id="cigma2bSpecial1Progress"></span>
@@ -4117,7 +4150,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="he1MilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Kills 
                         <span id="he1SlateProgress"></span>
@@ -4170,7 +4203,8 @@
                     <button id="savehe1ProgressButton">Save HE-1 Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="he1SpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Decrypt</strong>: 30 Vermin kills
                         <span id="he1Special1Progress"></span>
@@ -4250,7 +4284,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="sirin9mmMilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Critical Kills 
                         <span id="sirin9mmSlateProgress"></span>
@@ -4303,7 +4337,8 @@
                     <button id="savesirin9mmProgressButton">Save Sirin 9mm Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="sirin9mmSpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Starsynbc</strong>: 300 hipfire kills
                         <span id="sirin9mmSpecial1Progress"></span>
@@ -4383,7 +4418,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="knifeMilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Kills 
                         <span id="knifeSlateProgress"></span>
@@ -4436,7 +4471,8 @@
                     <button id="saveknifeProgressButton">Save Knife Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="knifeSpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Dying Bloom</strong>: 300 kills with Brain Rot equipped
                         <span id="knifeSpecial1Progress"></span>
@@ -4508,8 +4544,8 @@
             <img src="/Weapon_Photos/BaseballBat.webp" alt="Baseball Bat">
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
-                <h3>Military Camos:</h3>
-                <ul>
+                <ul id="baseballbatMilitaryCamos">
+                    <ul>
                     <li>
                         <strong>Slate</strong>: Get 100 Kills 
                         <span id="baseballbatSlateProgress"></span>
@@ -4562,7 +4598,8 @@
                     <button id="savebaseballbatProgressButton">Save Baseball Bat Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="baseballbatSpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Banished</strong>: 300 kills at Rare rarity or higher
                         <span id="baseballbatSpecial1Progress"></span>
@@ -4635,7 +4672,7 @@
             <button class="expandCamoButton">Show Challenges and Camos</button>
             <div class="camos">
                 <h3>Military Camos:</h3>
-                <ul>
+                <ul id="powerdrillMilitaryCamos">
                     <li>
                         <strong>Slate</strong>: Get 100 Kills 
                         <span id="powerdrillSlateProgress"></span>
@@ -4688,7 +4725,8 @@
                     <button id="savepowerdrillProgressButton">Save Power Drill Progress</button>
                 </div>
                 <h3>Special Camos:</h3>
-                <ul>
+                <p>Military Camos must be done to see Special Camos.</p>
+                <ul id="powerdrillSpecialCamos" style="display:none;">                    
                     <li>
                         <strong>Glimmering Grove</strong>: 300 kills at Rare rarity or higher
                         <span id="powerdrillSpecial1Progress"></span>

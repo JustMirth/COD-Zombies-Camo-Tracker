@@ -1,3 +1,10 @@
+//Function to Clear Local Storage
+document.getElementById('clearLocalStorage').onclick = clearStorage;
+function clearStorage() {
+    localStorage.clear();
+    location.reload();
+}
+
 //Function to Show hidden weapons
 const expandWeaponButtons = document.querySelectorAll('.expandWeaponButton');
 expandWeaponButtons.forEach(button => {
@@ -39,6 +46,7 @@ function updateWeaponCamoProgress(weapon, completedKills) {
             progressElement.textContent = ` - Progress: ${completedKills} / ${camo.requiredKills}`;
         }
         createProgressChart(canvas, completedKills, camo.requiredKills);
+        checkAndRevealSpecialCamos(weapon); 
     });
 }
 
@@ -357,6 +365,28 @@ function createProgressChart(canvas, completedKills, requiredKills) {
             }
         }
     });
+}
+
+//Reveal Special Camos
+function checkAndRevealSpecialCamos(weapon) {
+    const militaryCamosCompleted = checkMilitaryCamoCompletion(weapon);
+    if (militaryCamosCompleted) {
+        const specialCamoDiv = document.getElementById(`${weapon}SpecialCamos`);
+        specialCamoDiv.style.display = "block";
+    } else {
+        const specialCamoDiv = document.getElementById(`${weapon}SpecialCamos`);
+        specialCamoDiv.style.display = "none";
+    }
+}
+
+//Check if Military Camos are Done
+function checkMilitaryCamoCompletion(weapon) {
+    const lastMilitaryCamoKills = localStorage.getItem(`${weapon}CompletedKills`);
+    const lastRequiredKills = 2000;
+    if (lastMilitaryCamoKills >= lastRequiredKills) {
+        return true;
+    }
+    return false;
 }
 
 //On Page Load
