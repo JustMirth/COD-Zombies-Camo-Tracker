@@ -32,32 +32,24 @@ border: 1px solid #ccc;
 display: block;
 }
 
-:root {
-    --main-color: #ec6f00;
-}
-
 @font-face {
     font-family: "Hitmarker";
     src: url("fonts/HitmarkerText-Regular.ttf");
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
     font-family: "Hitmarker";
     src: url("fonts/HitmarkerText-Bold.ttf");
     font-weight: bold;
     font-style: normal;
 }
-
 @font-face {
     font-family: "Hitmarker";
     src: url("fonts/HitmarkerText-Italic.ttf");
     font-weight: normal;
     font-style: italic;
 }
-
-
 h1 {
     font-family: "Hitmarker";
     font-size: 50px;
@@ -65,7 +57,29 @@ h1 {
     font-weight: bold;
     font-style: italic;
 }
-
 .highlight {
     color: 	#ec6f00;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 10%;
+    text-align: center;
+    font-family: "Hitmarker";
+    font-weight: normal;
+    font-size: normal;
+}
+ul li {
+    border: 1px solid #ec6f00 ;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
 }
