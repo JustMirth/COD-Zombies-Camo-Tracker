@@ -31,3 +31,41 @@ border: 1px solid #ccc;
 .camos.show {
 display: block;
 }
+
+:root {
+    --main-color: #ec6f00;
+}
+
+@font-face {
+    font-family: "Hitmarker";
+    src: url("fonts/HitmarkerText-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Hitmarker";
+    src: url("fonts/HitmarkerText-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Hitmarker";
+    src: url("fonts/HitmarkerText-Italic.ttf");
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+h1 {
+    font-family: "Hitmarker";
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.highlight {
+    color: 	#ec6f00;
+}
